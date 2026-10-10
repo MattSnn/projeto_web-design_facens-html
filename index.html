@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<!-- Projeto acadêmico: conversão de React, Vite e Tailwind para tecnologias nativas. -->
+<html lang="pt-BR">
+<head>
+    <!-- Codificação, responsividade e informações usadas pelo navegador. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ImobiFaces: encontre apartamentos e conheça oportunidades imobiliárias.">
+    <meta name="theme-color" content="#172554">
+    <title>ImobiFaces | Encontre seu próximo lar</title>
+    <!-- O CSS é externo, conforme a atividade de Web Design. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- defer executa o JavaScript depois de o documento ter sido analisado. -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Atalho de acessibilidade: evita percorrer o menu com o teclado. -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <!-- Cabeçalho compartilhado entre todas as telas. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#inicio" aria-label="ImobiFaces, página inicial">
+                <span>Imobi</span><span class="brand-accent">Faces</span>
+            </a>
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#oportunidades">Oportunidades</a>
+                <a href="#catalogo">Todos os imóveis</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <a class="button button-primary header-cta" href="#contato">
+                Falar com um especialista
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-dialog">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- O diálogo nativo fornece foco controlado e fechamento pela tecla Escape. -->
+    <dialog class="menu-dialog" id="menu-dialog">
+        <div class="menu-heading">
+            <strong>Navegação</strong>
+            <button class="icon-button" type="button" data-close-menu aria-label="Fechar menu">×</button>
+        </div>
+        <nav class="drawer-links" aria-label="Menu de páginas">
+            <a href="#inicio">Página inicial</a>
+            <a href="#oportunidades">Imóveis em destaque</a>
+            <a href="#catalogo">Todos os apartamentos</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#faq">Perguntas frequentes</a>
+            <a href="#carreiras">Trabalhe conosco</a>
+            <a class="button button-primary" href="#contato">Entre em contato</a>
+        </nav>
+    </dialog>
+    <main id="conteudo">
+        <!-- Tela inicial: a navegação por hash mantém tudo em um único HTML. -->
+        <div id="home-view" class="page-view">
+            <section id="inicio" class="hero">
+                <div class="container hero-content">
+                    <p class="eyebrow">Um novo endereço. Uma nova história.</p>
+                    <h1>Imobi<span>Faces</span></h1>
+                    <p class="hero-description">
+                        Há mais de 15 anos conectando pessoas aos seus lares ideais.
+                        Somos especialistas em imóveis de alto padrão, unindo
+                        atendimento próximo, confiança e as melhores oportunidades
+                        do mercado imobiliário.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#oportunidades">Ver oportunidades <span aria-hidden="true">→</span></a>
+                        <a class="button button-glass" href="#contato">Falar com um especialista</a>
+                    </div>
+                    <p class="hero-note">Seu próximo capítulo começa aqui.</p>
+                </div>
+            </section>
+            <!-- Carrossel: as setas alteram a rolagem horizontal dos cards. -->
+            <section id="oportunidades" class="section highlights">
+                <div class="container">
+                    <header class="section-heading">
+                        <div>
+                            <p class="eyebrow">Encontre o seu lugar</p>
+                            <h2>Imóveis em destaque</h2>
+                            <p>Endereços para diferentes momentos da vida.</p>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="icon-button" id="carousel-prev" type="button" aria-label="Imóveis anteriores">←</button>
+                            <button class="icon-button" id="carousel-next" type="button" aria-label="Próximos imóveis">→</button>
+                        </div>
+                    </header>
+                    <div class="featured-track" id="featured-track" aria-label="Imóveis em destaque" tabindex="0">
+                        <!-- Card de Boa Vista Towers: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Boa Vista Towers">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Alto da Boa Vista</p>
+                                <h3>Boa Vista Towers</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>2 ou 3 dorms</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>43 a 85 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/boa-vista">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Horizonte Moema: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Horizonte Moema">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Moema</p>
+                                <h3>Horizonte Moema</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>3 a 4 dorms (2 suítes)</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>120 a 240 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/moema">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Vila Madalena: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Vila Madalena">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Vila Madalena</p>
+                                <h3>Vila Madalena</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>Studio e 1 dorm</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>35 a 55 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/vila-madalena">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Jardins Prime: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Jardins Prime">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Jardim Paulista</p>
+                                <h3>Jardins Prime</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>4 dorms (4 suítes)</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>200 a 420 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/jardins">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Pinheiros Design: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Pinheiros Design">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Pinheiros</p>
+                                <h3>Pinheiros Design</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>1 a 3 dorms</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>50 a 110 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/pinheiros">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Urban Tatuapé: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Urban Tatuapé">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Tatuapé</p>
+                                <h3>Urban Tatuapé</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>2 dorms (1 suíte)</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>65 a 90 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/tatuape">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Terraço Ibirapuera: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Terraço Ibirapuera">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Vila Mariana</p>
+                                <h3>Terraço Ibirapuera</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>3 dorms (1 a 3 suítes)</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>140 a 300 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/ibirapuera">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Card de Oásis Brooklin: conteúdo estático acessível sem JavaScript. -->
+                        <article class="featured-card">
+                            <div class="property-photo photo-building" role="img" aria-label="Edifício ilustrativo de Oásis Brooklin">
+                                <span class="photo-tag">Destaque</span>
+                            </div>
+                            <div class="featured-body">
+                                <p class="card-location">Brooklin</p>
+                                <h3>Oásis Brooklin</h3>
+                                <ul class="property-facts">
+                                    <li>
+                                        <span aria-hidden="true">▱</span>
+                                        <span>1 ou 2 dorms</span>
+                                    </li>
+                                    <li>
+                                        <span aria-hidden="true">↔</span>
+                                        <span>45 a 75 m²</span>
+                                    </li>
+                                </ul>
+                                <a class="card-link" href="#imovel/brooklin">
+                                    Conheça o imóvel
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="section-actions">
+                        <a class="button button-outline" href="#catalogo">Explorar todos os imóveis</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Indicadores preservados do original; são dados demonstrativos. -->
+            <section id="sobre" class="section about-section">
+                <div class="container">
+                    <header class="section-heading">
+                        <div>
+                            <p class="eyebrow">Confiança para o próximo passo</p>
+                            <h2>Sobre nós</h2>
+                            <p>Um atendimento próximo para encontrar o endereço ideal.</p>
+                        </div>
+                    </header>
+                    <div class="stats-grid">
+                        <article class="stat-card photo-house">
+                            <div class="stat-content">
+                                <h3>Imóveis vendidos</h3>
+                                <p>345.123</p>
+                            </div>
+                        </article>
+                        <article class="stat-card photo-families">
+                            <div class="stat-content">
+                                <h3>Famílias atendidas</h3>
+                                <p>496.589</p>
+                            </div>
+                        </article>
+                        <article class="stat-card photo-agency">
+                            <div class="stat-content">
+                                <h3>Anos de mercado</h3>
+                                <p>15</p>
+                            </div>
+                        </article>
+                        <article class="stat-card photo-agent">
+                            <div class="stat-content">
+                                <h3>Corretores especialistas</h3>
+                                <p>25</p>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="demo-note">Indicadores e imóveis ilustrativos de um projeto acadêmico.</p>
+                </div>
+            </section>
+        </div>
+        <!-- Catálogo: busca textual combinada com preço e metragem. -->
+        <section id="catalog-view" class="page-view section catalog-section" hidden>
+            <div class="container">
+                <header class="section-heading">
+                    <div>
+                        <p class="eyebrow">Seu próximo endereço</p>
+                        <h1>Todos os imóveis</h1>
+                        <p>Compare as oportunidades e encontre um imóvel para você.</p>
+                    </div>
+                    <a class="text-link" href="#inicio">← Voltar ao início</a>
+                </header>
+                <form class="filter-bar" id="filter-form" role="search">
+                    <div class="field search-field">
+                        <label for="search">Pesquisar por nome ou cidade</label>
+                        <input id="search" name="search" type="search" placeholder="Ex.: Residencial Jardim" autocomplete="off">
+                    </div>
+                    <div class="field">
+                        <label for="area-filter">Metragem</label>
+                        <select id="area-filter" name="area">
+                            <option value="">Todas as áreas</option>
+                            <option value="small">Menor que 50 m²</option>
+                            <option value="medium">De 50 a 100 m²</option>
+                            <option value="large">Acima de 100 m²</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="price-filter">Preço</label>
+                        <select id="price-filter" name="price">
+                            <option value="">Todos os preços</option>
+                            <option value="low">Até R$ 500.000</option>
+                            <option value="middle">Acima de R$ 500.000 até R$ 1.000.000</option>
+                            <option value="high">Acima de R$ 1.000.000</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="sort-filter">Ordenação</label>
+                        <select id="sort-filter" name="sort">
+                            <option value="original">Ordem original</option>
+                            <option value="price-asc">Menor preço</option>
+                            <option value="price-desc">Maior preço</option>
+                            <option value="area-asc">Menor área</option>
+                        </select>
+                    </div>
+                    <button class="button button-light" type="reset">Limpar filtros</button>
+                </form>
+                <div class="results-heading">
+                    <h2>Oportunidades disponíveis</h2>
+                    <p id="results-count" role="status" aria-live="polite"></p>
+                </div>
+                <div class="catalog-grid" id="catalog-grid"></div>
+                <div class="empty-state" id="empty-state" hidden>
+                    <h3>Nenhum imóvel encontrado</h3>
+                    <p>Tente mudar a busca, a metragem ou o preço.</p>
+                    <button class="button button-primary" id="clear-empty" type="button">Limpar filtros</button>
+                </div>
+            </div>
+        </section>
+        <!-- Detalhe: preenchido com os dados do imóvel selecionado. -->
+        <section id="detail-view" class="page-view section detail-section" hidden>
+            <div class="container">
+                <a class="text-link back-link" href="#catalogo">← Todos os imóveis</a>
+                <div class="detail-heading">
+                    <div>
+                        <p class="eyebrow">Conheça seu próximo lar</p>
+                        <h1 id="detail-name"></h1>
+                        <p id="detail-location"></p>
+                    </div>
+                    <p class="detail-price" id="detail-price"></p>
+                </div>
+                <div class="gallery">
+                    <button class="gallery-main photo-building" type="button" data-gallery="building" aria-label="Ampliar foto do edifício">
+                        <span>Ver foto do edifício</span>
+                    </button>
+                    <button class="gallery-secondary photo-house" type="button" data-gallery="house" aria-label="Ampliar foto ilustrativa do imóvel">
+                        <span>Ver foto ilustrativa</span>
+                    </button>
+                </div>
+                <p class="demo-note">Fotos ilustrativas reaproveitadas do projeto original.</p>
+                <div class="detail-layout">
+                    <article class="detail-description">
+                        <h2>Sobre este imóvel</h2>
+                        <p id="detail-description"></p>
+                        <ul class="detail-facts" id="detail-facts"></ul>
+                        <h3>O próximo passo é conhecer de perto</h3>
+                        <p>Converse com nossa equipe para esclarecer dúvidas e solicitar informações sobre uma visita.</p>
+                    </article>
+                    <aside class="visit-card">
+                        <p class="eyebrow">Atendimento próximo</p>
+                        <h2>Gostou deste endereço?</h2>
+                        <p>Envie o nome do imóvel para nossa equipe.</p>
+                        <a class="button button-primary" id="detail-contact" href="mailto:imobifaces@gmail.com">Solicitar informações</a>
+                        <a class="text-link" href="#contato">Outros canais de contato</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <!-- Conteúdos compartilhados continuam disponíveis em todas as telas. -->
+        <section id="faq" class="section faq-section">
+            <div class="container narrow-container">
+                <header class="section-heading">
+                    <div>
+                        <p class="eyebrow">Antes do próximo passo</p>
+                        <h2>Perguntas frequentes</h2>
+                    </div>
+                </header>
+                <details class="faq-item">
+                    <summary>Como encontrar um imóvel?</summary>
+                    <p>Acesse Todos os imóveis e combine a busca com os filtros de metragem e preço. Clique em Conheça para abrir os detalhes.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Como solicitar uma visita?</summary>
+                    <p>Na página do imóvel, use Solicitar informações para abrir seu aplicativo de e-mail com o assunto preenchido.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Os anúncios representam imóveis reais?</summary>
+                    <p>Não. Este site é um projeto acadêmico da disciplina de Web Design. Os anúncios, imagens e indicadores são demonstrativos.</p>
+                </details>
+            </div>
+        </section>
+        <section id="carreiras" class="section careers-section">
+            <div class="container careers-inner">
+                <div>
+                    <p class="eyebrow">Faça parte da nossa história</p>
+                    <h2>Trabalhe conosco</h2>
+                    <p>Fale com a equipe para conhecer mais sobre a ImobiFaces.</p>
+                </div>
+                <a class="button button-outline" href="mailto:imobifaces@gmail.com?subject=Trabalhe%20conosco">Entrar em contato</a>
+            </div>
+        </section>
+        <section id="contato" class="section contact-section">
+            <div class="container narrow-container">
+                <header class="contact-heading">
+                    <p class="eyebrow">Vamos conversar?</p>
+                    <h2>Entre em contato conosco!</h2>
+                    <p>Escolha um dos canais abaixo para falar com nossa equipe.</p>
+                </header>
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">✉</span>
+                        <h3>E-mail</h3>
+                        <p>Envie suas dúvidas e o nome do imóvel.</p>
+                        <a href="mailto:imobifaces@gmail.com">imobifaces@gmail.com</a>
+                    </article>
+                    <article class="contact-card">
+                        <span class="contact-icon" aria-hidden="true">☎</span>
+                        <h3>Telefone / Outro</h3>
+                        <p>(11) 99999-9999</p>
+                        <small>Número ilustrativo do projeto original.</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Rodapé com os mesmos créditos de desenvolvimento do original. -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a class="brand" href="#inicio">Imobi<span>Faces</span></a>
+                    <p>Encontre o imóvel ideal com segurança e agilidade.</p>
+                </div>
+                <div class="footer-credits">
+                    <h2>Desenvolvido por</h2>
+                    <ul>
+                        <li>Mateus Sonnenberg</li>
+                        <li>Pedro Wagner</li>
+                        <li>Rodrigo Boava</li>
+                        <li>Jhonny Walter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ImobiFaces. Projeto acadêmico — FACENS.</p>
+                <p>Web Design • HTML, CSS e JavaScript</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Galeria ampliada: não depende de bibliotecas de terceiros. -->
+    <dialog class="photo-dialog" id="photo-dialog">
+        <div class="photo-dialog-heading">
+            <p id="photo-caption">Foto ilustrativa</p>
+            <button class="icon-button" id="close-photo" type="button" aria-label="Fechar foto">×</button>
+        </div>
+        <div class="lightbox-image" id="lightbox-image" role="img" aria-label="Foto ilustrativa ampliada"></div>
+    </dialog>
+    <!-- O site inicial e os contatos funcionam mesmo sem JavaScript. -->
+    <noscript>
+        <p class="noscript-message">Ative o JavaScript para usar o catálogo, os filtros e os detalhes dos imóveis.</p>
+    </noscript>
+</body>
+</html>
