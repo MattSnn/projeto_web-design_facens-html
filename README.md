@@ -1,97 +1,37 @@
-# ImobiFaces — versão HTML, CSS e JavaScript
+# ImobiFaces — conversão para HTML, CSS e JavaScript
 
-Este repositório é a **transformação do projeto original desenvolvido com Vite, React, TypeScript e Tailwind CSS** para HTML, CSS e JavaScript puro.
+Este repositório é a transformação do projeto original [projeto_web-design_facens](https://github.com/MattSnn/projeto_web-design_facens), desenvolvido com **Vite, React, TypeScript e Tailwind CSS**.
 
-Projeto original: https://github.com/MattSnn/projeto_web-design_facens
+A conversão foi refeita com auxílio de IA para concentrar o site em três arquivos e comprovar a quantidade de linhas exigida na atividade intermediária de Web Design. Conforme orientação do professor, o projeto original continua desenvolvido com Vite, React e Tailwind; esta versão serve à apresentação dos requisitos em HTML e CSS externos.
 
-Referência utilizada: commit `304fcf025c77bcca0e588eb71322d947de499bfa`.
+## Arquivos do site
 
-Esta versão corresponde a uma atividade intermediária de Web Design da FACENS, não à finalização do projeto. Preserva a marca, as imagens, os destaques, os dados do catálogo, os indicadores e os créditos do original. Adiciona funcionamento aos botões e à página de detalhes que ainda estavam incompletos.
+- `index.html`: estrutura gerada diretamente pelos componentes originais e templates das páginas.
+- `style.css`: CSS compilado do projeto original, expandido para leitura, incluindo reset, cores, estilos, efeitos e regras responsivas.
+- `script.js`: referências às imagens originais e tradução dos estados e eventos React para JavaScript nativo.
 
-## Estrutura
+O README é documentação; o site utiliza somente os três arquivos acima. Para executar, abra `index.html` no navegador, mantendo os arquivos na mesma pasta e conexão com a internet para carregar as imagens. Não é necessário instalar dependências ou executar Vite, React ou Tailwind.
 
-O site utiliza somente três arquivos de execução. Este README é a documentação adicional solicitada.
+## Fidelidade ao original
 
-| Arquivo | Responsabilidade | Linhas |
-| --- | --- | ---: |
-| `index.html` | Estrutura semântica, página inicial, destaques, telas, perguntas e contato | 520 |
-| `style.css` | Tema, box model, layouts Flexbox, responsividade e imagens incorporadas | 1.155 |
-| `script.js` | Filtros, ordenação, rotas, menu, carrossel e galeria | 364 |
+A referência da conversão é o commit `304fcf025c77bcca0e588eb71322d947de499bfa` do repositório original. O HTML foi obtido dos próprios componentes React, e o CSS foi compilado usando as dependências travadas no `package-lock.json` original. Os links de imagens apontam para os arquivos do mesmo commit original, sem redimensionamento ou recompressão.
 
-As linhas estão formatadas e os blocos têm comentários explicativos. As imagens originais foram comprimidas e incorporadas como data URIs no CSS para que não seja necessária uma pasta de imagens. As seis declarações dessas imagens ocupam somente seis linhas; não foram divididas para aumentar a contagem. Não há React, Tailwind, Vite, dependências via CDN ou etapa de build nesta versão.
+Foram preservados textos, classes, dimensões, fontes, cores, gradientes, sombras, efeitos de hover, breakpoints, menu lateral, carrossel e filtros de nome, preço e metragem. A galeria conserva o alerta original. Os botões sem ação no original continuam sem ação; nenhuma página ou funcionalidade adicional foi inventada.
 
-## Executar
+As únicas adaptações estruturais são templates HTML para substituir os componentes, eventos JavaScript para substituir os hooks e URLs das imagens originais para dispensar arquivos adicionais. O agrupamento inválido de opções com `div` dentro de `select` foi substituído por opções HTML válidas, conservando a classe de cor original.
 
-Abra `index.html` em um navegador atual. Os três arquivos devem permanecer na mesma pasta.
+Não foi realizada comparação visual por capturas de navegador nesta execução. A fidelidade foi verificada na estrutura gerada, nas regras CSS e nas referências aos arquivos de imagem; isso não deve ser apresentado como uma comparação pixel a pixel.
 
-Opcionalmente, no terminal do VS Code, execute `python -m http.server 8000` nessa pasta e abra http://localhost:8000.
+## Quantidade de linhas
 
-## Relação com os requisitos da atividade
+- `index.html`: 1.732 linhas.
+- `style.css`: 1.001 linhas.
+- `script.js`: 249 linhas.
 
-| Requisito | Implementação / evidência |
-| --- | --- |
-| `index.html` e `style.css` com CSS externo | `<link rel="stylesheet" href="style.css">` no cabeçalho |
-| 20 elementos com Content, Padding, Border e Margin | 23 seletores com largura, padding, border e margin explícitos; comentários B01–B23 no CSS |
-| Flexbox para organização responsiva | 87 declarações de Flexbox, sem contar display/gap, distribuídas pelos componentes e media queries |
-| Git no VS Code e publicação no GitHub | Etapa a executar e registrar no VS Code; não confundir preparação em outro ambiente com evidência dessa exigência |
-| Mais de 400 linhas de HTML | 520 linhas |
-| Mais de 300 linhas de CSS | 1.155 linhas |
-| Melhorias e novos recursos | Cards ligados a detalhes, busca por cidade e nome, ordenação, galeria, FAQ e menu funcional |
-| Comentários explicativos | Blocos comentados nos três arquivos, inclusive regras de layout e funções |
-| Arquivo com código, repositório e prints | Precisa ser preparado para a entrega; este README documenta o código, mas não substitui os prints |
-| Envio no Canvas | Etapa do aluno após conferir os arquivos e a documentação |
+As quebras no HTML ficam dentro das tags para não introduzir espaços nos textos. O CSS preserva a ordem das regras e a cascata original. O HTML e o CSS superam, respectivamente, os mínimos de 400 e 300 linhas.
 
-### Observações sobre a interpretação do enunciado
+## Comentários e verificação
 
-Content é a área de conteúdo do box model, definida aqui por `width`, `height` ou `min-height`; não é a propriedade CSS `content`, utilizada em pseudo-elementos. Alguns elementos usam largura automática ou borda zero de forma intencional; os valores estão explicitamente atribuídos.
+Os comentários identificam a origem da estrutura, o CSS compilado, os dados e as imagens, e explicam a navegação, o bloqueio de rolagem, os limites do carrossel, as comparações dos filtros e o estado vazio. O CSS mantém as camadas de tema, estilos básicos e utilitários originais.
 
-O pedido de “20 propriedades de Flexbox” foi atendido como pelo menos 20 aplicações/declarações de Flexbox. Não significa 20 nomes distintos de propriedades: propriedades como `align-items`, `justify-content`, `flex-direction`, `flex-wrap`, `flex`, `flex-grow`, `flex-shrink` e `flex-basis` são reutilizadas conforme a necessidade. Caso o professor utilize outra interpretação, confirme com ele.
-
-### Elementos com box model explícito
-
-Os comentários B01–B23 identificam: contêiner, seção, atalho de acessibilidade, cabeçalho, marca, botão, botão do menu, diálogo do menu, hero, descrição do hero, cabeçalho da seção, botão de ícone, card de imóvel, corpo do card, indicador, barra de filtros, campos, estado vazio, painel de visita, pergunta frequente, card de contato, rodapé e diálogo de foto.
-
-Há mais de 20 elementos reais no HTML utilizando esses seletores, incluindo oito cards de destaque, quatro indicadores e três perguntas frequentes.
-
-## Recursos
-
-- Página inicial com imagem original, identidade azul e chamadas para ação.
-- Oito destaques com acesso a páginas de detalhes.
-- Catálogo com os seis registros originais, preços e áreas preservados.
-- Busca por nome ou cidade, ignorando diferenças de acentos e maiúsculas.
-- Filtros combinados por preço e área, com opção de limpar e estado vazio.
-- Ordenação por preço crescente, decrescente e área crescente.
-- Navegação por hash, compatível com arquivo local e hospedagem estática.
-- Menu e galeria em diálogos nativos, com fechamento por Escape.
-- Carrossel com setas e rolagem por toque.
-- Perguntas frequentes com `details` e `summary`.
-- Link de e-mail com identificação do imóvel no assunto e no corpo.
-- Adaptação a celular, tablet, impressão e preferência por movimento reduzido.
-- Atalho de teclado para o conteúdo, foco visível e contagem de resultados acessível.
-
-## Dados demonstrativos e limites
-
-Este é um projeto acadêmico. Os anúncios, indicadores, imagens e telefone são ilustrativos, conforme os conteúdos do original. O telefone fictício não inicia uma chamada. O link de e-mail abre o aplicativo do usuário: o site não possui servidor de envio, cadastro, autenticação ou banco de dados. Os destaques sem preço no original mantêm “Consulte a equipe”, sem inventar valores.
-
-O HTML preserva a página inicial e os contatos sem JavaScript. Catálogo, filtros, detalhes, menu e galeria exigem JavaScript habilitado.
-
-## Verificação realizada
-
-- Sintaxe do JavaScript verificada com `node --check`.
-- Checagem estrutural: CSS externo, IDs únicos, âncoras existentes, contagem de linhas, 23 seletores de box model e 87 declarações Flexbox.
-- Testes com DOM simulado: filtros combinados, busca sem acentos, ordenação, limites de preço e área, estado vazio, renderização e rotas válidas/inválidas.
-- A conferência visual em navegador e os prints de entrega ainda devem ser realizados; testes com DOM simulado não substituem essa etapa.
-
-## Preparar a entrega no VS Code
-
-1. Abra a pasta no VS Code e confira os três arquivos.
-2. Inicialize ou abra o repositório pela aba Controle do Código-Fonte.
-3. Faça uma alteração real, por exemplo um ajuste de texto, e registre um commit explicando a melhoria.
-4. Publique ou sincronize com o novo repositório no GitHub.
-5. Capture prints da página inicial, catálogo filtrado, detalhes, layout de celular e histórico de commits no VS Code/GitHub.
-6. Monte o documento solicitado com os códigos, o link do novo repositório e os prints.
-7. Confira o documento e envie no Canvas.
-
-## Créditos
-
-Equipe preservada do rodapé original: Mateus Sonnenberg, Pedro Wagner, Rodrigo Boava e Jhonny Walter.
+A versão anterior deste repositório havia alterado o layout. Esta revisão substitui essa implementação pela conversão baseada diretamente no original.
