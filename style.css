@@ -2,8 +2,11 @@
    Expandido para leitura: tokens, reset, utilitários, estados e media queries.
    Nenhum framework ou compilador é necessário para abrir esta versão. */
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+/* Camada properties: mantém a ordem da cascata original. */
 @layer properties {
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+        /* Regra *,:before,:after,::backdrop: variável de tema ou de estado --tw-translate-x; variável de tema ou de estado --tw-translate-y; variável de tema ou de estado --tw-translate-z; variável de tema ou de estado --tw-rotate-x; variável de tema ou de estado --tw-rotate-y; variável de tema ou de estado --tw-rotate-z; variável de tema ou de estado --tw-skew-x; variável de tema ou de estado --tw-skew-y; variável de tema ou de estado --tw-border-style; variável de tema ou de estado --tw-gradient-position; variável de tema ou de estado --tw-gradient-from; variável de tema ou de estado --tw-gradient-via; variável de tema ou de estado --tw-gradient-to; variável de tema ou de estado --tw-gradient-stops; variável de tema ou de estado --tw-gradient-via-stops; variável de tema ou de estado --tw-gradient-from-position; variável de tema ou de estado --tw-gradient-via-position; variável de tema ou de estado --tw-gradient-to-position; variável de tema ou de estado --tw-leading; variável de tema ou de estado --tw-font-weight; variável de tema ou de estado --tw-tracking; variável de tema ou de estado --tw-shadow; variável de tema ou de estado --tw-shadow-color; variável de tema ou de estado --tw-shadow-alpha; variável de tema ou de estado --tw-inset-shadow; variável de tema ou de estado --tw-inset-shadow-color; variável de tema ou de estado --tw-inset-shadow-alpha; variável de tema ou de estado --tw-ring-color; variável de tema ou de estado --tw-ring-shadow; variável de tema ou de estado --tw-inset-ring-color; variável de tema ou de estado --tw-inset-ring-shadow; variável de tema ou de estado --tw-ring-inset; variável de tema ou de estado --tw-ring-offset-width; variável de tema ou de estado --tw-ring-offset-color; variável de tema ou de estado --tw-ring-offset-shadow; variável de tema ou de estado --tw-blur; variável de tema ou de estado --tw-brightness; variável de tema ou de estado --tw-contrast; variável de tema ou de estado --tw-grayscale; variável de tema ou de estado --tw-hue-rotate; variável de tema ou de estado --tw-invert; variável de tema ou de estado --tw-opacity; variável de tema ou de estado --tw-saturate; variável de tema ou de estado --tw-sepia; variável de tema ou de estado --tw-drop-shadow; variável de tema ou de estado --tw-drop-shadow-color; variável de tema ou de estado --tw-drop-shadow-alpha; variável de tema ou de estado --tw-drop-shadow-size; variável de tema ou de estado --tw-backdrop-blur; variável de tema ou de estado --tw-backdrop-brightness; variável de tema ou de estado --tw-backdrop-contrast; variável de tema ou de estado --tw-backdrop-grayscale; variável de tema ou de estado --tw-backdrop-hue-rotate; variável de tema ou de estado --tw-backdrop-invert; variável de tema ou de estado --tw-backdrop-opacity; variável de tema ou de estado --tw-backdrop-saturate; variável de tema ou de estado --tw-backdrop-sepia; variável de tema ou de estado --tw-duration; variável de tema ou de estado --tw-ease; variável de tema ou de estado --tw-scale-x; variável de tema ou de estado --tw-scale-y; variável de tema ou de estado --tw-scale-z; variável de tema ou de estado --tw-outline-style. */
         *,:before,:after,::backdrop {
             --tw-translate-x:0;
             --tw-translate-y:0;
@@ -73,7 +76,9 @@
     }
     
 }
+/* Camada theme: mantém a ordem da cascata original. */
 @layer theme {
+    /* Regra :root,:host: variável de tema ou de estado --font-sans; variável de tema ou de estado --font-serif; variável de tema ou de estado --font-mono; variável de tema ou de estado --color-blue-50; variável de tema ou de estado --color-blue-200; variável de tema ou de estado --color-blue-400; variável de tema ou de estado --color-blue-600; variável de tema ou de estado --color-blue-700; variável de tema ou de estado --color-blue-800; variável de tema ou de estado --color-blue-950; variável de tema ou de estado --color-indigo-900; variável de tema ou de estado --color-indigo-950; variável de tema ou de estado --color-gray-200; variável de tema ou de estado --color-gray-300; variável de tema ou de estado --color-gray-400; variável de tema ou de estado --color-gray-600; variável de tema ou de estado --color-black; variável de tema ou de estado --color-white; variável de tema ou de estado --spacing; variável de tema ou de estado --breakpoint-2xl; variável de tema ou de estado --container-xs; variável de tema ou de estado --container-2xl; variável de tema ou de estado --container-4xl; variável de tema ou de estado --container-6xl; variável de tema ou de estado --text-xs; variável de tema ou de estado --text-xs--line-height; variável de tema ou de estado --text-sm; variável de tema ou de estado --text-sm--line-height; variável de tema ou de estado --text-base; variável de tema ou de estado --text-base--line-height; variável de tema ou de estado --text-lg; variável de tema ou de estado --text-lg--line-height; variável de tema ou de estado --text-xl; variável de tema ou de estado --text-xl--line-height; variável de tema ou de estado --text-2xl; variável de tema ou de estado --text-2xl--line-height; variável de tema ou de estado --text-3xl; variável de tema ou de estado --text-3xl--line-height; variável de tema ou de estado --text-4xl; variável de tema ou de estado --text-4xl--line-height; variável de tema ou de estado --text-6xl; variável de tema ou de estado --text-6xl--line-height; variável de tema ou de estado --text-8xl; variável de tema ou de estado --text-8xl--line-height; variável de tema ou de estado --font-weight-medium; variável de tema ou de estado --font-weight-semibold; variável de tema ou de estado --font-weight-bold; variável de tema ou de estado --font-weight-black; variável de tema ou de estado --tracking-tight; variável de tema ou de estado --tracking-wider; variável de tema ou de estado --leading-tight; variável de tema ou de estado --leading-relaxed; variável de tema ou de estado --radius-md; variável de tema ou de estado --radius-lg; variável de tema ou de estado --radius-xl; variável de tema ou de estado --radius-2xl; variável de tema ou de estado --radius-3xl; variável de tema ou de estado --radius-4xl; variável de tema ou de estado --ease-out; variável de tema ou de estado --blur-md; variável de tema ou de estado --default-transition-duration; variável de tema ou de estado --default-transition-timing-function; variável de tema ou de estado --default-font-family; variável de tema ou de estado --default-mono-font-family; variável de tema ou de estado --color-brand; variável de tema ou de estado --color-brand-dark; variável de tema ou de estado --color-brand-full-dark; variável de tema ou de estado --color-brand-light; variável de tema ou de estado --color-brand-muted; variável de tema ou de estado --color-brand-border; variável de tema ou de estado --color-on-brand; variável de tema ou de estado --color-accent; variável de tema ou de estado --color-accent-hover; variável de tema ou de estado --color-on-accent; variável de tema ou de estado --color-surface; variável de tema ou de estado --color-surface-muted; variável de tema ou de estado --color-ink. */
     :root,:host {
         --font-sans:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         --font-serif:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -155,19 +160,23 @@
     }
     
 }
+/* Camada base: mantém a ordem da cascata original. */
 @layer base {
+    /* Regra *,:after,:before,::backdrop: cálculo das dimensões; borda; margem externa; espaçamento interno. */
     *,:after,:before,::backdrop {
         box-sizing:border-box;
         border:0 solid;
         margin:0;
         padding:0
     }
+    /* Regra ::file-selector-button: cálculo das dimensões; borda; margem externa; espaçamento interno. */
     ::file-selector-button {
         box-sizing:border-box;
         border:0 solid;
         margin:0;
         padding:0
     }
+    /* Regra html,:host: propriedade -webkit-text-size-adjust; propriedade tab-size; altura das linhas; família tipográfica; propriedade font-feature-settings; propriedade font-variation-settings; propriedade -webkit-tap-highlight-color. */
     html,:host {
         -webkit-text-size-adjust:100%;
         tab-size:4;
@@ -177,19 +186,23 @@
         font-variation-settings:var(--default-font-variation-settings,normal);
         -webkit-tap-highlight-color:transparent
     }
+    /* Regra hr: altura; cor do texto; aparência da borda em top-width. */
     hr {
         height:0;
         color:inherit;
         border-top-width:1px
     }
+    /* Regra abbr:where([title]): propriedade -webkit-text-decoration; propriedade text-decoration. */
     abbr:where([title]) {
         -webkit-text-decoration:underline dotted;
         text-decoration:underline dotted
     }
+    /* Regra h1,h2,h3,h4,h5,h6: tamanho da fonte; peso da fonte. */
     h1,h2,h3,h4,h5,h6 {
         font-size:inherit;
         font-weight:inherit
     }
+    /* Regra a: cor do texto; propriedade -webkit-text-decoration; propriedade text-decoration. */
     a {
         color:inherit;
         -webkit-text-decoration:inherit;
@@ -198,55 +211,69 @@
         -webkit-text-decoration:inherit;
         text-decoration:inherit
     }
+    /* Regra b,strong: peso da fonte. */
     b,strong {
         font-weight:bolder
     }
+    /* Regra code,kbd,samp,pre: família tipográfica; propriedade font-feature-settings; propriedade font-variation-settings; tamanho da fonte. */
     code,kbd,samp,pre {
         font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
         font-feature-settings:var(--default-mono-font-feature-settings,normal);
         font-variation-settings:var(--default-mono-font-variation-settings,normal);
         font-size:1em
     }
+    /* Regra small: tamanho da fonte. */
     small {
         font-size:80%
     }
+    /* Regra sub,sup: propriedade vertical-align; tamanho da fonte; altura das linhas; posicionamento. */
     sub,sup {
         vertical-align:baseline;
         font-size:75%;
         line-height:0;
         position:relative
     }
+    /* Regra sub: propriedade bottom. */
     sub {
         bottom:-.25em
     }
+    /* Regra sup: propriedade top. */
     sup {
         top:-.5em
     }
+    /* Regra table: propriedade text-indent; aparência da borda em color; aparência da borda em collapse. */
     table {
         text-indent:0;
         border-color:inherit;
         border-collapse:collapse
     }
+    /* Regra :-moz-focusring:where(:not(iframe)): propriedade outline. */
     :-moz-focusring:where(:not(iframe)) {
         outline:auto
     }
+    /* Regra progress: propriedade vertical-align. */
     progress {
         vertical-align:baseline
     }
+    /* Regra summary: modo de organização dos elementos. */
     summary {
         display:list-item
     }
+    /* Regra ol,ul,menu: propriedade list-style. */
     ol,ul,menu {
         list-style:none
     }
+    /* Regra img,svg,video,canvas,audio,iframe,embed,object: propriedade vertical-align; modo de organização dos elementos. */
     img,svg,video,canvas,audio,iframe,embed,object {
         vertical-align:middle;
         display:block
     }
+    /* Regra img,video: largura máxima; altura. */
     img,video {
         max-width:100%;
         height:auto
     }
+    /* Regra button,input,select,optgroup,textarea: propriedade font; propriedade font-feature-settings; propriedade font-variation-settings; propriedade letter-spacing; cor do texto; transparência; cor de fundo; arredondamento dos cantos. */
     button,input,select,optgroup,textarea {
         font:inherit;
         font-feature-settings:inherit;
@@ -257,6 +284,7 @@
         background-color:#0000;
         border-radius:0
     }
+    /* Regra ::file-selector-button: propriedade font; propriedade font-feature-settings; propriedade font-variation-settings; propriedade letter-spacing; cor do texto; transparência; cor de fundo; arredondamento dos cantos. */
     ::file-selector-button {
         font:inherit;
         font-feature-settings:inherit;
@@ -267,23 +295,31 @@
         background-color:#0000;
         border-radius:0
     }
+    /* Regra :where(select:is([multiple],[size])) optgroup: peso da fonte. */
     :where(select:is([multiple],[size])) optgroup {
         font-weight:bolder
     }
+    /* Regra :where(select:is([multiple],[size])) optgroup option: espaçamento interno em inline-start. */
     :where(select:is([multiple],[size])) optgroup option {
         padding-inline-start:20px
     }
+    /* Regra ::file-selector-button: margem externa em inline-end. */
     ::file-selector-button {
         margin-inline-end:4px
     }
+    /* Regra ::placeholder: transparência. */
     ::placeholder {
         opacity:1
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px) {
+        /* Regra ::placeholder: cor do texto. */
         ::placeholder {
             color:currentColor
         }
+        /* Aplica estas regras quando o navegador oferece os recursos indicados. */
         @supports (color:color-mix(in lab, red, red)) {
+            /* Regra ::placeholder: cor do texto. */
             ::placeholder {
                 color:color-mix(in oklab, currentcolor 50%, transparent)
             }
@@ -291,711 +327,1152 @@
         }
         
     }
+    /* Regra textarea: propriedade resize. */
     textarea {
         resize:vertical
     }
+    /* Regra ::-webkit-search-decoration: propriedade -webkit-appearance. */
     ::-webkit-search-decoration {
         -webkit-appearance:none
     }
+    /* Regra ::-webkit-date-and-time-value: altura mínima; alinhamento do texto. */
     ::-webkit-date-and-time-value {
         min-height:1lh;
         text-align:inherit
     }
+    /* Regra ::-webkit-datetime-edit: modo de organização dos elementos. */
     ::-webkit-datetime-edit {
         display:inline-flex
     }
+    /* Regra ::-webkit-datetime-edit-fields-wrapper: espaçamento interno. */
     ::-webkit-datetime-edit-fields-wrapper {
         padding:0
     }
+    /* Regra ::-webkit-datetime-edit: espaçamento interno em block. */
     ::-webkit-datetime-edit {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-year-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-year-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-month-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-month-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-day-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-day-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-hour-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-hour-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-minute-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-minute-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-second-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-second-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-millisecond-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-millisecond-field {
         padding-block:0
     }
+    /* Regra ::-webkit-datetime-edit-meridiem-field: espaçamento interno em block. */
     ::-webkit-datetime-edit-meridiem-field {
         padding-block:0
     }
+    /* Regra ::-webkit-calendar-picker-indicator: altura das linhas. */
     ::-webkit-calendar-picker-indicator {
         line-height:1
     }
+    /* Regra :-moz-ui-invalid: sombra. */
     :-moz-ui-invalid {
         box-shadow:none
     }
+    /* Regra button,input:where([type=button],[type=reset],[type=submit]): propriedade appearance. */
     button,input:where([type=button],[type=reset],[type=submit]) {
         appearance:button
     }
+    /* Regra ::file-selector-button: propriedade appearance. */
     ::file-selector-button {
         appearance:button
     }
+    /* Regra ::-webkit-inner-spin-button: altura. */
     ::-webkit-inner-spin-button {
         height:auto
     }
+    /* Regra ::-webkit-outer-spin-button: altura. */
     ::-webkit-outer-spin-button {
         height:auto
     }
+    /* Regra [hidden]:where(:not([hidden=until-found])): modo de organização dos elementos. */
     [hidden]:where(:not([hidden=until-found])) {
         display:none!important
     }
+    /* Regra *: cálculo das dimensões; margem externa; espaçamento interno. */
     * {
         box-sizing:border-box;
         margin:0;
         padding:0
     }
+    /* Regra body: família tipográfica. */
     body {
         font-family:Inter,sans-serif
     }
+    /* Regra html: propriedade scroll-behavior. */
     html {
         scroll-behavior:smooth
     }
     
 }
+/* Camada components: mantém a ordem da cascata original. */
 @layer components;
+/* Camada utilities: mantém a ordem da cascata original. */
 @layer utilities {
+    /* Regra .pointer-events-none: propriedade pointer-events. */
     .pointer-events-none {
         pointer-events:none
     }
+    /* Regra .absolute: posicionamento. */
     .absolute {
         position:absolute
     }
+    /* Regra .fixed: posicionamento. */
     .fixed {
         position:fixed
     }
+    /* Regra .relative: posicionamento. */
     .relative {
         position:relative
     }
+    /* Regra .inset-0: distância às bordas. */
     .inset-0 {
         inset:0
     }
+    /* Regra .inset-x-0: propriedade inset-inline. */
     .inset-x-0 {
         inset-inline:0
     }
+    /* Regra .top-0: propriedade top. */
     .top-0 {
         top:0
     }
+    /* Regra .right-0: propriedade right. */
     .right-0 {
         right:0
     }
+    /* Regra .bottom-0: propriedade bottom. */
     .bottom-0 {
         bottom:0
     }
+    /* Regra .left-0: propriedade left. */
     .left-0 {
         left:0
     }
+    /* Regra .isolate: contexto de empilhamento. */
     .isolate {
         isolation:isolate
     }
+    /* Regra .-z-10: ordem de empilhamento. */
     .-z-10 {
         z-index:calc(10 * -1)
     }
+    /* Regra .z-30: ordem de empilhamento. */
     .z-30 {
         z-index:30
     }
+    /* Regra .z-40: ordem de empilhamento. */
     .z-40 {
         z-index:40
     }
+    /* Regra .z-50: ordem de empilhamento. */
     .z-50 {
         z-index:50
     }
+    /* Regra .m-1: margem externa. */
     .m-1 {
         margin:var(--spacing)
     }
+    /* Regra .m-2: margem externa. */
     .m-2 {
         margin:calc(var(--spacing) * 2)
     }
+    /* Regra .mx-auto: margem externa em inline. */
     .mx-auto {
         margin-inline:auto
     }
+    /* Regra .mt-1: margem externa em top. */
     .mt-1 {
         margin-top:var(--spacing)
     }
+    /* Regra .mt-2: margem externa em top. */
     .mt-2 {
         margin-top:calc(var(--spacing) * 2)
     }
+    /* Regra .mt-5: margem externa em top. */
     .mt-5 {
         margin-top:calc(var(--spacing) * 5)
     }
+    /* Regra .mt-auto: margem externa em top. */
     .mt-auto {
         margin-top:auto
     }
+    /* Regra .mb-2: margem externa em bottom. */
     .mb-2 {
         margin-bottom:calc(var(--spacing) * 2)
     }
+    /* Regra .mb-3: margem externa em bottom. */
     .mb-3 {
         margin-bottom:calc(var(--spacing) * 3)
     }
+    /* Regra .mb-4: margem externa em bottom. */
     .mb-4 {
         margin-bottom:calc(var(--spacing) * 4)
     }
+    /* Regra .mb-5: margem externa em bottom. */
     .mb-5 {
         margin-bottom:calc(var(--spacing) * 5)
     }
+    /* Regra .mb-6: margem externa em bottom. */
     .mb-6 {
         margin-bottom:calc(var(--spacing) * 6)
     }
+    /* Regra .mb-10: margem externa em bottom. */
     .mb-10 {
         margin-bottom:calc(var(--spacing) * 10)
     }
+    /* Regra .mb-15: margem externa em bottom. */
     .mb-15 {
         margin-bottom:calc(var(--spacing) * 15)
     }
+    /* Regra .line-clamp-1: propriedade -webkit-line-clamp; propriedade -webkit-box-orient; modo de organização dos elementos; tratamento do conteúdo excedente. */
     .line-clamp-1 {
         -webkit-line-clamp:1;
         -webkit-box-orient:vertical;
         display:-webkit-box;
         overflow:hidden
     }
+    /* Regra .block: modo de organização dos elementos. */
     .block {
         display:block
     }
+    /* Regra .flex: modo de organização dos elementos. */
     .flex {
         display:flex
     }
+    /* Regra .grid: modo de organização dos elementos. */
     .grid {
         display:grid
     }
+    /* Regra .hidden: modo de organização dos elementos. */
     .hidden {
         display:none
     }
+    /* Regra .inline-flex: modo de organização dos elementos. */
     .inline-flex {
         display:inline-flex
     }
+    /* Regra .aspect-4\/5: propriedade aspect-ratio. */
     .aspect-4\/5 {
         aspect-ratio:4/5
     }
+    /* Regra .h-0\.5: altura. */
     .h-0\.5 {
         height:calc(var(--spacing) * .5)
     }
+    /* Regra .h-7: altura. */
     .h-7 {
         height:calc(var(--spacing) * 7)
     }
+    /* Regra .h-8: altura. */
     .h-8 {
         height:calc(var(--spacing) * 8)
     }
+    /* Regra .h-8\.5: altura. */
     .h-8\.5 {
         height:calc(var(--spacing) * 8.5)
     }
+    /* Regra .h-10: altura. */
     .h-10 {
         height:calc(var(--spacing) * 10)
     }
+    /* Regra .h-13: altura. */
     .h-13 {
         height:calc(var(--spacing) * 13)
     }
+    /* Regra .h-14: altura. */
     .h-14 {
         height:calc(var(--spacing) * 14)
     }
+    /* Regra .h-48: altura. */
     .h-48 {
         height:calc(var(--spacing) * 48)
     }
+    /* Regra .h-55: altura. */
     .h-55 {
         height:calc(var(--spacing) * 55)
     }
+    /* Regra .h-64: altura. */
     .h-64 {
         height:calc(var(--spacing) * 64)
     }
+    /* Regra .h-full: altura. */
     .h-full {
         height:100%
     }
+    /* Regra .h-screen: altura. */
     .h-screen {
         height:100vh
     }
+    /* Regra .min-h-screen: altura mínima. */
     .min-h-screen {
         min-height:100vh
     }
+    /* Regra .w-1: largura. */
     .w-1 {
         width:var(--spacing)
     }
+    /* Regra .w-6: largura. */
     .w-6 {
         width:calc(var(--spacing) * 6)
     }
+    /* Regra .w-7: largura. */
     .w-7 {
         width:calc(var(--spacing) * 7)
     }
+    /* Regra .w-8: largura. */
     .w-8 {
         width:calc(var(--spacing) * 8)
     }
+    /* Regra .w-10: largura. */
     .w-10 {
         width:calc(var(--spacing) * 10)
     }
+    /* Regra .w-25: largura. */
     .w-25 {
         width:calc(var(--spacing) * 25)
     }
+    /* Regra .w-42: largura. */
     .w-42 {
         width:calc(var(--spacing) * 42)
     }
+    /* Regra .w-64: largura. */
     .w-64 {
         width:calc(var(--spacing) * 64)
     }
+    /* Regra .w-85: largura. */
     .w-85 {
         width:calc(var(--spacing) * 85)
     }
+    /* Regra .w-full: largura. */
     .w-full {
         width:100%
     }
+    /* Regra .max-w-2xl: largura máxima. */
     .max-w-2xl {
         max-width:var(--container-2xl)
     }
+    /* Regra .max-w-4xl: largura máxima. */
     .max-w-4xl {
         max-width:var(--container-4xl)
     }
+    /* Regra .max-w-6xl: largura máxima. */
     .max-w-6xl {
         max-width:var(--container-6xl)
     }
+    /* Regra .max-w-full: largura máxima. */
     .max-w-full {
         max-width:100%
     }
+    /* Regra .max-w-screen-2xl: largura máxima. */
     .max-w-screen-2xl {
         max-width:var(--breakpoint-2xl)
     }
+    /* Regra .max-w-xs: largura máxima. */
     .max-w-xs {
         max-width:var(--container-xs)
     }
+    /* Regra .flex-1: distribuição do espaço Flexbox. */
     .flex-1 {
         flex:1
     }
+    /* Regra .shrink-0: encolhimento dos itens Flexbox. */
     .shrink-0 {
         flex-shrink:0
     }
+    /* Regra .translate-x-0: variável de tema ou de estado --tw-translate-x; deslocamento. */
     .translate-x-0 {
         --tw-translate-x:0px;
         translate:var(--tw-translate-x) var(--tw-translate-y)
     }
+    /* Regra .translate-x-full: variável de tema ou de estado --tw-translate-x; deslocamento. */
     .translate-x-full {
         --tw-translate-x:100%;
         translate:var(--tw-translate-x) var(--tw-translate-y)
     }
+    /* Regra .transform: transformação geométrica. */
     .transform {
         transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)
     }
+    /* Regra .grid-cols-1: colunas da grade. */
     .grid-cols-1 {
         grid-template-columns:repeat(1,minmax(0,1fr))
     }
+    /* Regra .grid-cols-2: colunas da grade. */
     .grid-cols-2 {
         grid-template-columns:repeat(2,minmax(0,1fr))
     }
+    /* Regra .grid-rows-2: linhas da grade. */
     .grid-rows-2 {
         grid-template-rows:repeat(2,minmax(0,1fr))
     }
+    /* Regra .flex-col: direção dos itens Flexbox. */
     .flex-col {
         flex-direction:column
     }
+    /* Regra .flex-wrap: quebra de linha dos itens Flexbox. */
     .flex-wrap {
         flex-wrap:wrap
     }
+    /* Regra .content-center: propriedade align-content. */
     .content-center {
         align-content:center
     }
+    /* Regra .items-baseline: alinhamento no eixo transversal. */
     .items-baseline {
         align-items:baseline
     }
+    /* Regra .items-center: alinhamento no eixo transversal. */
     .items-center {
         align-items:center
     }
+    /* Regra .items-end: alinhamento no eixo transversal. */
     .items-end {
         align-items:flex-end
     }
+    /* Regra .items-start: alinhamento no eixo transversal. */
     .items-start {
         align-items:flex-start
     }
+    /* Regra .items-stretch: alinhamento no eixo transversal. */
     .items-stretch {
         align-items:stretch
     }
+    /* Regra .justify-around: distribuição no eixo principal. */
     .justify-around {
         justify-content:space-around
     }
+    /* Regra .justify-between: distribuição no eixo principal. */
     .justify-between {
         justify-content:space-between
     }
+    /* Regra .justify-center: distribuição no eixo principal. */
     .justify-center {
         justify-content:center
     }
+    /* Regra .justify-end: distribuição no eixo principal. */
     .justify-end {
         justify-content:flex-end
     }
+    /* Regra .gap-1\.5: espaço entre itens. */
     .gap-1\.5 {
         gap:calc(var(--spacing) * 1.5)
     }
+    /* Regra .gap-2: espaço entre itens. */
     .gap-2 {
         gap:calc(var(--spacing) * 2)
     }
+    /* Regra .gap-3: espaço entre itens. */
     .gap-3 {
         gap:calc(var(--spacing) * 3)
     }
+    /* Regra .gap-4: espaço entre itens. */
     .gap-4 {
         gap:calc(var(--spacing) * 4)
     }
+    /* Regra .gap-6: espaço entre itens. */
     .gap-6 {
         gap:calc(var(--spacing) * 6)
     }
+    /* Regra .overflow-hidden: tratamento do conteúdo excedente. */
     .overflow-hidden {
         overflow:hidden
     }
+    /* Regra .rounded-2xl: arredondamento dos cantos. */
     .rounded-2xl {
         border-radius:var(--radius-2xl)
     }
+    /* Regra .rounded-3xl: arredondamento dos cantos. */
     .rounded-3xl {
         border-radius:var(--radius-3xl)
     }
+    /* Regra .rounded-full: arredondamento dos cantos. */
     .rounded-full {
         border-radius:2147483647px
     }
+    /* Regra .rounded-lg: arredondamento dos cantos. */
     .rounded-lg {
         border-radius:var(--radius-lg)
     }
+    /* Regra .rounded-md: arredondamento dos cantos. */
     .rounded-md {
         border-radius:var(--radius-md)
     }
+    /* Regra .rounded-xl: arredondamento dos cantos. */
     .rounded-xl {
         border-radius:var(--radius-xl)
     }
+    /* Regra .rounded-tr-3xl: aparência da borda em top-right-radius. */
     .rounded-tr-3xl {
         border-top-right-radius:var(--radius-3xl)
     }
+    /* Regra .rounded-tr-4xl: aparência da borda em top-right-radius. */
     .rounded-tr-4xl {
         border-top-right-radius:var(--radius-4xl)
     }
+    /* Regra .rounded-tr-\[50px\]: aparência da borda em top-right-radius. */
     .rounded-tr-\[50px\] {
         border-top-right-radius:50px
     }
+    /* Regra .border: aparência da borda em style; aparência da borda em width. */
     .border {
         border-style:var(--tw-border-style);
         border-width:1px
     }
+    /* Regra .border-2: aparência da borda em style; aparência da borda em width. */
     .border-2 {
         border-style:var(--tw-border-style);
         border-width:2px
     }
+    /* Regra .border-t: aparência da borda em top-style; aparência da borda em top-width. */
     .border-t {
         border-top-style:var(--tw-border-style);
         border-top-width:1px
     }
+    /* Regra .border-t-3: aparência da borda em top-style; aparência da borda em top-width. */
     .border-t-3 {
         border-top-style:var(--tw-border-style);
         border-top-width:3px
     }
+    /* Regra .border-brand-border: aparência da borda em color. */
     .border-brand-border {
         border-color:var(--color-brand-border)
     }
+    /* Regra .border-brand-dark: aparência da borda em color. */
     .border-brand-dark {
         border-color:var(--color-brand-dark)
     }
+    /* Regra .border-brand-dark\/70: aparência da borda em color. */
     .border-brand-dark\/70 {
         border-color:#172554b3
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .border-brand-dark\/70: aparência da borda em color. */
         .border-brand-dark\/70 {
             border-color:color-mix(in oklab, var(--color-brand-dark) 70%, transparent)
         }
         
     }
+    /* Regra .border-gray-200: aparência da borda em color. */
     .border-gray-200 {
         border-color:var(--color-gray-200)
     }
+    /* Regra .border-gray-300: aparência da borda em color. */
     .border-gray-300 {
         border-color:var(--color-gray-300)
     }
+    /* Regra .border-white\/20: aparência da borda em color. */
     .border-white\/20 {
         border-color:#fff3
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .border-white\/20: aparência da borda em color. */
         .border-white\/20 {
             border-color:color-mix(in oklab, var(--color-white) 20%, transparent)
         }
         
     }
+    /* Regra .bg-accent: cor de fundo. */
     .bg-accent {
         background-color:var(--color-accent)
     }
+    /* Regra .bg-black: cor de fundo. */
     .bg-black {
         background-color:var(--color-black)
     }
+    /* Regra .bg-black\/40: cor de fundo. */
     .bg-black\/40 {
         background-color:#0006
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .bg-black\/40: cor de fundo. */
         .bg-black\/40 {
             background-color:color-mix(in oklab, var(--color-black) 40%, transparent)
         }
         
     }
+    /* Regra .bg-brand-dark: cor de fundo. */
     .bg-brand-dark {
         background-color:var(--color-brand-dark)
     }
+    /* Regra .bg-brand-muted: cor de fundo. */
     .bg-brand-muted {
         background-color:var(--color-brand-muted)
     }
+    /* Regra .bg-gray-300: cor de fundo. */
     .bg-gray-300 {
         background-color:var(--color-gray-300)
     }
+    /* Regra .bg-indigo-900: cor de fundo. */
     .bg-indigo-900 {
         background-color:var(--color-indigo-900)
     }
+    /* Regra .bg-white: cor de fundo. */
     .bg-white {
         background-color:var(--color-white)
     }
+    /* Regra .bg-white\/10: cor de fundo. */
     .bg-white\/10 {
         background-color:#ffffff1a
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .bg-white\/10: cor de fundo. */
         .bg-white\/10 {
             background-color:color-mix(in oklab, var(--color-white) 10%, transparent)
         }
         
     }
+    /* Regra .bg-white\/70: cor de fundo. */
     .bg-white\/70 {
         background-color:#ffffffb3
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .bg-white\/70: cor de fundo. */
         .bg-white\/70 {
             background-color:color-mix(in oklab, var(--color-white) 70%, transparent)
         }
         
     }
+    /* Regra .bg-white\/95: cor de fundo. */
     .bg-white\/95 {
         background-color:#fffffff2
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .bg-white\/95: cor de fundo. */
         .bg-white\/95 {
             background-color:color-mix(in oklab, var(--color-white) 95%, transparent)
         }
         
     }
+    /* Regra .bg-linear-to-r: variável de tema ou de estado --tw-gradient-position. */
     .bg-linear-to-r {
         --tw-gradient-position:to right
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (background-image:linear-gradient(in lab, red, red)) {
+        /* Regra .bg-linear-to-r: variável de tema ou de estado --tw-gradient-position. */
         .bg-linear-to-r {
             --tw-gradient-position:to right in oklab
         }
         
     }
+    /* Regra .bg-linear-to-r: imagem ou gradiente do fundo. */
     .bg-linear-to-r {
         background-image:linear-gradient(var(--tw-gradient-stops))
     }
+    /* Regra .bg-linear-to-t: variável de tema ou de estado --tw-gradient-position. */
     .bg-linear-to-t {
         --tw-gradient-position:to top
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (background-image:linear-gradient(in lab, red, red)) {
+        /* Regra .bg-linear-to-t: variável de tema ou de estado --tw-gradient-position. */
         .bg-linear-to-t {
             --tw-gradient-position:to top in oklab
         }
         
     }
+    /* Regra .bg-linear-to-t: imagem ou gradiente do fundo. */
     .bg-linear-to-t {
         background-image:linear-gradient(var(--tw-gradient-stops))
     }
+    /* Regra .bg-linear-to-tr: variável de tema ou de estado --tw-gradient-position. */
     .bg-linear-to-tr {
         --tw-gradient-position:to top right
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (background-image:linear-gradient(in lab, red, red)) {
+        /* Regra .bg-linear-to-tr: variável de tema ou de estado --tw-gradient-position. */
         .bg-linear-to-tr {
             --tw-gradient-position:to top right in oklab
         }
         
     }
+    /* Regra .bg-linear-to-tr: imagem ou gradiente do fundo. */
     .bg-linear-to-tr {
         background-image:linear-gradient(var(--tw-gradient-stops))
     }
+    /* Regra .from-blue-50: variável de tema ou de estado --tw-gradient-from; variável de tema ou de estado --tw-gradient-stops. */
     .from-blue-50 {
         --tw-gradient-from:var(--color-blue-50);
         --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
+    /* Regra .from-blue-950: variável de tema ou de estado --tw-gradient-from; variável de tema ou de estado --tw-gradient-stops. */
     .from-blue-950 {
         --tw-gradient-from:var(--color-blue-950);
         --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
+    /* Regra .from-brand-full-dark: variável de tema ou de estado --tw-gradient-from; variável de tema ou de estado --tw-gradient-stops. */
     .from-brand-full-dark {
         --tw-gradient-from:var(--color-brand-full-dark);
         --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
+    /* Regra .from-indigo-950\/80: variável de tema ou de estado --tw-gradient-from. */
     .from-indigo-950\/80 {
         --tw-gradient-from:#1e1a4dcc
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .from-indigo-950\/80: variável de tema ou de estado --tw-gradient-from. */
         .from-indigo-950\/80 {
             --tw-gradient-from:color-mix(in oklab, var(--color-indigo-950) 80%, transparent)
         }
         
     }
+    /* Regra .from-indigo-950\/80: variável de tema ou de estado --tw-gradient-stops. */
     .from-indigo-950\/80 {
         --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
+    /* Regra .via-blue-950\/70: variável de tema ou de estado --tw-gradient-via. */
     .via-blue-950\/70 {
         --tw-gradient-via:#162456b3
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .via-blue-950\/70: variável de tema ou de estado --tw-gradient-via. */
         .via-blue-950\/70 {
             --tw-gradient-via:color-mix(in oklab, var(--color-blue-950) 70%, transparent)
         }
         
     }
+    /* Regra .via-blue-950\/70: variável de tema ou de estado --tw-gradient-via-stops; variável de tema ou de estado --tw-gradient-stops. */
     .via-blue-950\/70 {
         --tw-gradient-via-stops:var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
         --tw-gradient-stops:var(--tw-gradient-via-stops)
     }
+    /* Regra .via-brand-full-dark\/60: variável de tema ou de estado --tw-gradient-via. */
     .via-brand-full-dark\/60 {
         --tw-gradient-via:#050d2999
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .via-brand-full-dark\/60: variável de tema ou de estado --tw-gradient-via. */
         .via-brand-full-dark\/60 {
             --tw-gradient-via:color-mix(in oklab, var(--color-brand-full-dark) 60%, transparent)
         }
         
     }
+    /* Regra .via-brand-full-dark\/60: variável de tema ou de estado --tw-gradient-via-stops; variável de tema ou de estado --tw-gradient-stops. */
     .via-brand-full-dark\/60 {
         --tw-gradient-via-stops:var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
         --tw-gradient-stops:var(--tw-gradient-via-stops)
     }
+    /* Regra .via-indigo-950\/15: variável de tema ou de estado --tw-gradient-via. */
     .via-indigo-950\/15 {
         --tw-gradient-via:#1e1a4d26
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .via-indigo-950\/15: variável de tema ou de estado --tw-gradient-via. */
         .via-indigo-950\/15 {
             --tw-gradient-via:color-mix(in oklab, var(--color-indigo-950) 15%, transparent)
         }
         
     }
+    /* Regra .via-indigo-950\/15: variável de tema ou de estado --tw-gradient-via-stops; variável de tema ou de estado --tw-gradient-stops. */
     .via-indigo-950\/15 {
         --tw-gradient-via-stops:var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
         --tw-gradient-stops:var(--tw-gradient-via-stops)
     }
+    /* Regra .via-transparent: variável de tema ou de estado --tw-gradient-via; variável de tema ou de estado --tw-gradient-via-stops; variável de tema ou de estado --tw-gradient-stops. */
     .via-transparent {
         --tw-gradient-via:transparent;
         --tw-gradient-via-stops:var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
         --tw-gradient-stops:var(--tw-gradient-via-stops)
     }
+    /* Regra .to-brand-full-dark\/25: variável de tema ou de estado --tw-gradient-to. */
     .to-brand-full-dark\/25 {
         --tw-gradient-to:#050d2940
     }
+    /* Aplica estas regras quando o navegador oferece os recursos indicados. */
     @supports (color:color-mix(in lab, red, red)) {
+        /* Regra .to-brand-full-dark\/25: variável de tema ou de estado --tw-gradient-to. */
         .to-brand-full-dark\/25 {
             --tw-gradient-to:color-mix(in oklab, var(--color-brand-full-dark) 25%, transparent)
         }
         
     }
+    /* Regra .to-brand-full-dark\/25: variável de tema ou de estado --tw-gradient-stops. */
     .to-brand-full-dark\/25 {
         --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
+    /* Regra .to-transparent: variável de tema ou de estado --tw-gradient-to; variável de tema ou de estado --tw-gradient-stops. */
     .to-transparent {
         --tw-gradient-to:transparent;
         --tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position))
     }
+    /* Regra .bg-cover: aparência do fundo em size. */
     .bg-cover {
         background-size:cover
     }
+    /* Regra .bg-center: aparência do fundo em position. */
     .bg-center {
         background-position:50%
     }
+    /* Regra .bg-no-repeat: aparência do fundo em repeat. */
     .bg-no-repeat {
         background-repeat:no-repeat
     }
+    /* Regra .object-cover: ajuste da imagem. */
     .object-cover {
         object-fit:cover
     }
+    /* Regra .p-1: espaçamento interno. */
     .p-1 {
         padding:var(--spacing)
     }
+    /* Regra .p-3: espaçamento interno. */
     .p-3 {
         padding:calc(var(--spacing) * 3)
     }
+    /* Regra .p-5: espaçamento interno. */
     .p-5 {
         padding:calc(var(--spacing) * 5)
     }
+    /* Regra .p-6: espaçamento interno. */
     .p-6 {
         padding:calc(var(--spacing) * 6)
     }
+    /* Regra .p-8: espaçamento interno. */
     .p-8 {
         padding:calc(var(--spacing) * 8)
     }
+    /* Regra .px-3: espaçamento interno em inline. */
     .px-3 {
         padding-inline:calc(var(--spacing) * 3)
     }
+    /* Regra .px-4: espaçamento interno em inline. */
     .px-4 {
         padding-inline:calc(var(--spacing) * 4)
     }
+    /* Regra .px-5: espaçamento interno em inline. */
     .px-5 {
         padding-inline:calc(var(--spacing) * 5)
     }
+    /* Regra .px-6: espaçamento interno em inline. */
     .px-6 {
         padding-inline:calc(var(--spacing) * 6)
     }
+    /* Regra .px-8: espaçamento interno em inline. */
     .px-8 {
         padding-inline:calc(var(--spacing) * 8)
     }
+    /* Regra .py-2: espaçamento interno em block. */
     .py-2 {
         padding-block:calc(var(--spacing) * 2)
     }
+    /* Regra .py-3: espaçamento interno em block. */
     .py-3 {
         padding-block:calc(var(--spacing) * 3)
     }
+    /* Regra .py-4: espaçamento interno em block. */
     .py-4 {
         padding-block:calc(var(--spacing) * 4)
     }
+    /* Regra .py-5: espaçamento interno em block. */
     .py-5 {
         padding-block:calc(var(--spacing) * 5)
     }
+    /* Regra .py-16: espaçamento interno em block. */
     .py-16 {
         padding-block:calc(var(--spacing) * 16)
     }
+    /* Regra .py-20: espaçamento interno em block. */
     .py-20 {
         padding-block:calc(var(--spacing) * 20)
     }
+    /* Regra .pt-6: espaçamento interno em top. */
     .pt-6 {
         padding-top:calc(var(--spacing) * 6)
     }
+    /* Regra .pt-10: espaçamento interno em top. */
     .pt-10 {
         padding-top:calc(var(--spacing) * 10)
     }
+    /* Regra .pt-12: espaçamento interno em top. */
     .pt-12 {
         padding-top:calc(var(--spacing) * 12)
     }
+    /* Regra .pt-20: espaçamento interno em top. */
     .pt-20 {
         padding-top:calc(var(--spacing) * 20)
     }
+    /* Regra .pt-24: espaçamento interno em top. */
     .pt-24 {
         padding-top:calc(var(--spacing) * 24)
     }
+    /* Regra .pb-2: espaçamento interno em bottom. */
     .pb-2 {
         padding-bottom:calc(var(--spacing) * 2)
     }
+    /* Regra .pb-6: espaçamento interno em bottom. */
     .pb-6 {
         padding-bottom:calc(var(--spacing) * 6)
     }
+    /* Regra .pb-10: espaçamento interno em bottom. */
     .pb-10 {
         padding-bottom:calc(var(--spacing) * 10)
     }
+    /* Regra .pb-16: espaçamento interno em bottom. */
     .pb-16 {
         padding-bottom:calc(var(--spacing) * 16)
     }
+    /* Regra .pl-20: espaçamento interno em left. */
     .pl-20 {
         padding-left:calc(var(--spacing) * 20)
     }
+    /* Regra .text-center: alinhamento do texto. */
     .text-center {
         text-align:center
     }
+    /* Regra .text-left: alinhamento do texto. */
     .text-left {
         text-align:left
     }
+    /* Regra .text-right: alinhamento do texto. */
     .text-right {
         text-align:right
     }
-    .font-\[\'Times_New_Roman\'\]{font-family:Times New Roman}.font-serif{font-family:var(--font-serif)}.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-6xl{font-size:var(--text-6xl);line-height:var(--tw-leading,var(--text-6xl--line-height))}.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.leading-none{--tw-leading:1;line-height:1}.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}.leading-tight{--tw-leading:var(--leading-tight);line-height:var(--leading-tight)}.font-black{--tw-font-weight:var(--font-weight-black);font-weight:var(--font-weight-black)}.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}.whitespace-nowrap{white-space:nowrap}.text-\[\#55627a\]{color:#55627a}.text-accent{color:var(--color-accent)}.text-black{color:var(--color-black)}.text-blue-200{color:var(--color-blue-200)}.text-blue-400{color:var(--color-blue-400)}.text-blue-600{color:var(--color-blue-600)}.text-brand{color:var(--color-brand)}.text-brand-dark{color:var(--color-brand-dark)}.text-brand-light{color:var(--color-brand-light)}.text-brand-muted{color:var(--color-brand-muted)}.text-gray-400{color:var(--color-gray-400)}.text-gray-600{color:var(--color-gray-600)}.text-ink{color:var(--color-ink)}.text-ink\/70{color:#111827b3}@supports (color:color-mix(in lab, red, red)){.text-ink\/70{color:color-mix(in oklab, var(--color-ink) 70%, transparent)}}.text-on-accent{color:var(--color-on-accent)}.text-on-brand{color:var(--color-on-brand)}.text-white{color:var(--color-white)}.text-white\/80{color:#fffc}@supports (color:color-mix(in lab, red, red)){.text-white\/80{color:color-mix(in oklab, var(--color-white) 80%, transparent)}}.uppercase{text-transform:uppercase}.opacity-0{opacity:0}.opacity-80{opacity:.8}.opacity-90{opacity:.9}.opacity-100{opacity:1}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-blur-md{--tw-backdrop-blur:blur(var(--blur-md));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-shadow{transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-300{--tw-duration:.3s;transition-duration:.3s}.duration-500{--tw-duration:.5s;transition-duration:.5s}.duration-600{--tw-duration:.6s;transition-duration:.6s}.duration-700{--tw-duration:.7s;transition-duration:.7s}.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}.select-none{-webkit-user-select:none;user-select:none}.group-focus-within\:h-4\/5:is(:where(.group):focus-within *){height:80%}.group-focus-within\:scale-105:is(:where(.group):focus-within *){--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}.group-focus-within\:opacity-100:is(:where(.group):focus-within *){opacity:1}@media (hover:hover){.group-hover\:h-4\/5:is(:where(.group):hover *){height:80%}.group-hover\:h-60:is(:where(.group):hover *){height:calc(var(--spacing) * 60)}.group-hover\:scale-105:is(:where(.group):hover *){--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}.group-hover\:opacity-100:is(:where(.group):hover *){opacity:1}.hover\:scale-105:hover{--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}.hover\:scale-110:hover{--tw-scale-x:110%;--tw-scale-y:110%;--tw-scale-z:110%;scale:var(--tw-scale-x) var(--tw-scale-y)}.hover\:cursor-pointer:hover{cursor:pointer}.hover\:bg-accent-hover:hover{background-color:var(--color-accent-hover)}.hover\:bg-blue-700:hover{background-color:var(--color-blue-700)}.hover\:bg-brand-muted\/70:hover{background-color:#2563ebb3}@supports (color:color-mix(in lab, red, red)){.hover\:bg-brand-muted\/70:hover{background-color:color-mix(in oklab, var(--color-brand-muted) 70%, transparent)}}.hover\:bg-surface-muted:hover{background-color:var(--color-surface-muted)}.hover\:bg-white\/20:hover{background-color:#fff3}@supports (color:color-mix(in lab, red, red)){.hover\:bg-white\/20:hover{background-color:color-mix(in oklab, var(--color-white) 20%, transparent)}}.hover\:text-\[\#222833\]:hover{color:#222833}.hover\:text-blue-800:hover{color:var(--color-blue-800)}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}.focus-visible\:shadow-xl:focus-visible{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus-visible\:outline-2:focus-visible{outline-style:var(--tw-outline-style);outline-width:2px}.focus-visible\:outline-accent:focus-visible{outline-color:var(--color-accent)}@media (prefers-reduced-motion:reduce){.motion-reduce\:transition-none{transition-property:none}}@media (width>=48rem){.md\:mt-0{margin-top:0}.md\:mt-3{margin-top:calc(var(--spacing) * 3)}.md\:mr-15{margin-right:calc(var(--spacing) * 15)}.md\:mb-0{margin-bottom:0}.md\:mb-8{margin-bottom:calc(var(--spacing) * 8)}.md\:ml-2{margin-left:calc(var(--spacing) * 2)}.md\:contents{display:contents}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-10{height:calc(var(--spacing) * 10)}.md\:h-16{height:calc(var(--spacing) * 16)}.md\:h-18\.75{height:calc(var(--spacing) * 18.75)}.md\:h-80{height:calc(var(--spacing) * 80)}.md\:h-120{height:calc(var(--spacing) * 120)}.md\:h-full{height:100%}.md\:w-1{width:var(--spacing)}.md\:w-1\/4{width:25%}.md\:w-4\/5{width:80%}.md\:w-10{width:calc(var(--spacing) * 10)}.md\:w-55{width:calc(var(--spacing) * 55)}.md\:w-80{width:calc(var(--spacing) * 80)}.md\:w-85{width:calc(var(--spacing) * 85)}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:gap-5{gap:calc(var(--spacing) * 5)}.md\:gap-x-5{column-gap:calc(var(--spacing) * 5)}.md\:border-t-0{border-top-style:var(--tw-border-style);border-top-width:0}.md\:bg-surface{background-color:var(--color-surface)}.md\:px-4{padding-inline:calc(var(--spacing) * 4)}.md\:px-8{padding-inline:calc(var(--spacing) * 8)}.md\:px-15{padding-inline:calc(var(--spacing) * 15)}.md\:py-3{padding-block:calc(var(--spacing) * 3)}.md\:py-5{padding-block:calc(var(--spacing) * 5)}.md\:pt-0{padding-top:0}.md\:pt-16{padding-top:calc(var(--spacing) * 16)}.md\:pt-24{padding-top:calc(var(--spacing) * 24)}.md\:text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.md\:text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}.md\:text-8xl{font-size:var(--text-8xl);line-height:var(--tw-leading,var(--text-8xl--line-height))}.md\:text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}.md\:text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}.md\:text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.md\:text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}.md\:text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.md\:opacity-90{opacity:.9}}@media (width>=64rem){.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:gap-6{gap:calc(var(--spacing) * 6)}}@starting-style{.starting\:translate-y-4{--tw-translate-y:calc(var(--spacing) * 4);translate:var(--tw-translate-x) var(--tw-translate-y)}.starting\:opacity-0{opacity:0}}}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-gradient-position{syntax:"*";inherits:false}@property --tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:"*";inherits:false}@property --tw-gradient-via-stops{syntax:"*";inherits:false}@property --tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}@property --tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-tracking{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}
+    /* Regra .font-\[\'Times_New_Roman\'\]: família tipográfica. */
+    .font-\[\'Times_New_Roman\'\]{font-family:Times New Roman}/* Regra .font-serif: família tipográfica. */
+.font-serif{font-family:var(--font-serif)}/* Regra .text-2xl: tamanho da fonte; altura das linhas. */
+.text-2xl{font-size:var(--text-2xl);line-height:var(--tw-leading,var(--text-2xl--line-height))}/* Regra .text-3xl: tamanho da fonte; altura das linhas. */
+.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}/* Regra .text-6xl: tamanho da fonte; altura das linhas. */
+.text-6xl{font-size:var(--text-6xl);line-height:var(--tw-leading,var(--text-6xl--line-height))}/* Regra .text-base: tamanho da fonte; altura das linhas. */
+.text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}/* Regra .text-lg: tamanho da fonte; altura das linhas. */
+.text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}/* Regra .text-sm: tamanho da fonte; altura das linhas. */
+.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}/* Regra .text-xl: tamanho da fonte; altura das linhas. */
+.text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}/* Regra .text-xs: tamanho da fonte; altura das linhas. */
+.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}/* Regra .leading-none: variável de tema ou de estado --tw-leading; altura das linhas. */
+.leading-none{--tw-leading:1;line-height:1}/* Regra .leading-relaxed: variável de tema ou de estado --tw-leading; altura das linhas. */
+.leading-relaxed{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}/* Regra .leading-tight: variável de tema ou de estado --tw-leading; altura das linhas. */
+.leading-tight{--tw-leading:var(--leading-tight);line-height:var(--leading-tight)}/* Regra .font-black: variável de tema ou de estado --tw-font-weight; peso da fonte. */
+.font-black{--tw-font-weight:var(--font-weight-black);font-weight:var(--font-weight-black)}/* Regra .font-bold: variável de tema ou de estado --tw-font-weight; peso da fonte. */
+.font-bold{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}/* Regra .font-medium: variável de tema ou de estado --tw-font-weight; peso da fonte. */
+.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}/* Regra .font-semibold: variável de tema ou de estado --tw-font-weight; peso da fonte. */
+.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}/* Regra .tracking-tight: variável de tema ou de estado --tw-tracking; propriedade letter-spacing. */
+.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}/* Regra .tracking-wider: variável de tema ou de estado --tw-tracking; propriedade letter-spacing. */
+.tracking-wider{--tw-tracking:var(--tracking-wider);letter-spacing:var(--tracking-wider)}/* Regra .whitespace-nowrap: propriedade white-space. */
+.whitespace-nowrap{white-space:nowrap}/* Regra .text-\[\#55627a\]: cor do texto. */
+.text-\[\#55627a\]{color:#55627a}/* Regra .text-accent: cor do texto. */
+.text-accent{color:var(--color-accent)}/* Regra .text-black: cor do texto. */
+.text-black{color:var(--color-black)}/* Regra .text-blue-200: cor do texto. */
+.text-blue-200{color:var(--color-blue-200)}/* Regra .text-blue-400: cor do texto. */
+.text-blue-400{color:var(--color-blue-400)}/* Regra .text-blue-600: cor do texto. */
+.text-blue-600{color:var(--color-blue-600)}/* Regra .text-brand: cor do texto. */
+.text-brand{color:var(--color-brand)}/* Regra .text-brand-dark: cor do texto. */
+.text-brand-dark{color:var(--color-brand-dark)}/* Regra .text-brand-light: cor do texto. */
+.text-brand-light{color:var(--color-brand-light)}/* Regra .text-brand-muted: cor do texto. */
+.text-brand-muted{color:var(--color-brand-muted)}/* Regra .text-gray-400: cor do texto. */
+.text-gray-400{color:var(--color-gray-400)}/* Regra .text-gray-600: cor do texto. */
+.text-gray-600{color:var(--color-gray-600)}/* Regra .text-ink: cor do texto. */
+.text-ink{color:var(--color-ink)}/* Regra .text-ink\/70: cor do texto. */
+.text-ink\/70{color:#111827b3}/* Aplica estas regras quando o navegador oferece os recursos indicados. */
+@supports (color:color-mix(in lab, red, red)){/* Regra .text-ink\/70: cor do texto. */
+.text-ink\/70{color:color-mix(in oklab, var(--color-ink) 70%, transparent)}}/* Regra .text-on-accent: cor do texto. */
+.text-on-accent{color:var(--color-on-accent)}/* Regra .text-on-brand: cor do texto. */
+.text-on-brand{color:var(--color-on-brand)}/* Regra .text-white: cor do texto. */
+.text-white{color:var(--color-white)}/* Regra .text-white\/80: cor do texto. */
+.text-white\/80{color:#fffc}/* Aplica estas regras quando o navegador oferece os recursos indicados. */
+@supports (color:color-mix(in lab, red, red)){/* Regra .text-white\/80: cor do texto. */
+.text-white\/80{color:color-mix(in oklab, var(--color-white) 80%, transparent)}}/* Regra .uppercase: propriedade text-transform. */
+.uppercase{text-transform:uppercase}/* Regra .opacity-0: transparência. */
+.opacity-0{opacity:0}/* Regra .opacity-80: transparência. */
+.opacity-80{opacity:.8}/* Regra .opacity-90: transparência. */
+.opacity-90{opacity:.9}/* Regra .opacity-100: transparência. */
+.opacity-100{opacity:1}/* Regra .shadow-lg: variável de tema ou de estado --tw-shadow; sombra. */
+.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,#0000001a), 0 4px 6px -4px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}/* Regra .shadow-md: variável de tema ou de estado --tw-shadow; sombra. */
+.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}/* Regra .shadow-sm: variável de tema ou de estado --tw-shadow; sombra. */
+.shadow-sm{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,#0000001a), 0 1px 2px -1px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}/* Regra .shadow-xl: variável de tema ou de estado --tw-shadow; sombra. */
+.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}/* Regra .filter: propriedade filter. */
+.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}/* Regra .backdrop-blur-md: variável de tema ou de estado --tw-backdrop-blur; propriedade -webkit-backdrop-filter; propriedade backdrop-filter. */
+.backdrop-blur-md{--tw-backdrop-blur:blur(var(--blur-md));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}/* Regra .transition: comportamento da transição em property; comportamento da transição em timing-function; comportamento da transição em duration. */
+.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}/* Regra .transition-all: comportamento da transição em property; comportamento da transição em timing-function; comportamento da transição em duration. */
+.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}/* Regra .transition-colors: comportamento da transição em property; comportamento da transição em timing-function; comportamento da transição em duration. */
+.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}/* Regra .transition-opacity: comportamento da transição em property; comportamento da transição em timing-function; comportamento da transição em duration. */
+.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}/* Regra .transition-shadow: comportamento da transição em property; comportamento da transição em timing-function; comportamento da transição em duration. */
+.transition-shadow{transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}/* Regra .transition-transform: comportamento da transição em property; comportamento da transição em timing-function; comportamento da transição em duration. */
+.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}/* Regra .duration-300: variável de tema ou de estado --tw-duration; comportamento da transição em duration. */
+.duration-300{--tw-duration:.3s;transition-duration:.3s}/* Regra .duration-500: variável de tema ou de estado --tw-duration; comportamento da transição em duration. */
+.duration-500{--tw-duration:.5s;transition-duration:.5s}/* Regra .duration-600: variável de tema ou de estado --tw-duration; comportamento da transição em duration. */
+.duration-600{--tw-duration:.6s;transition-duration:.6s}/* Regra .duration-700: variável de tema ou de estado --tw-duration; comportamento da transição em duration. */
+.duration-700{--tw-duration:.7s;transition-duration:.7s}/* Regra .ease-out: variável de tema ou de estado --tw-ease; comportamento da transição em timing-function. */
+.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}/* Regra .select-none: propriedade -webkit-user-select; propriedade user-select. */
+.select-none{-webkit-user-select:none;user-select:none}/* Regra .group-focus-within\:h-4\/5:is(:where(.group):focus-within *): altura. */
+.group-focus-within\:h-4\/5:is(:where(.group):focus-within *){height:80%}/* Regra .group-focus-within\:scale-105:is(:where(.group):focus-within *): variável de tema ou de estado --tw-scale-x; variável de tema ou de estado --tw-scale-y; variável de tema ou de estado --tw-scale-z; escala. */
+.group-focus-within\:scale-105:is(:where(.group):focus-within *){--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}/* Regra .group-focus-within\:opacity-100:is(:where(.group):focus-within *): transparência. */
+.group-focus-within\:opacity-100:is(:where(.group):focus-within *){opacity:1}/* Responsividade ou preferência do dispositivo: (hover:hover). */
+@media (hover:hover){/* Regra .group-hover\:h-4\/5:is(:where(.group):hover *): altura. */
+.group-hover\:h-4\/5:is(:where(.group):hover *){height:80%}/* Regra .group-hover\:h-60:is(:where(.group):hover *): altura. */
+.group-hover\:h-60:is(:where(.group):hover *){height:calc(var(--spacing) * 60)}/* Regra .group-hover\:scale-105:is(:where(.group):hover *): variável de tema ou de estado --tw-scale-x; variável de tema ou de estado --tw-scale-y; variável de tema ou de estado --tw-scale-z; escala. */
+.group-hover\:scale-105:is(:where(.group):hover *){--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}/* Regra .group-hover\:opacity-100:is(:where(.group):hover *): transparência. */
+.group-hover\:opacity-100:is(:where(.group):hover *){opacity:1}/* Regra .hover\:scale-105:hover: variável de tema ou de estado --tw-scale-x; variável de tema ou de estado --tw-scale-y; variável de tema ou de estado --tw-scale-z; escala. */
+.hover\:scale-105:hover{--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}/* Regra .hover\:scale-110:hover: variável de tema ou de estado --tw-scale-x; variável de tema ou de estado --tw-scale-y; variável de tema ou de estado --tw-scale-z; escala. */
+.hover\:scale-110:hover{--tw-scale-x:110%;--tw-scale-y:110%;--tw-scale-z:110%;scale:var(--tw-scale-x) var(--tw-scale-y)}/* Regra .hover\:cursor-pointer:hover: propriedade cursor. */
+.hover\:cursor-pointer:hover{cursor:pointer}/* Regra .hover\:bg-accent-hover:hover: cor de fundo. */
+.hover\:bg-accent-hover:hover{background-color:var(--color-accent-hover)}/* Regra .hover\:bg-blue-700:hover: cor de fundo. */
+.hover\:bg-blue-700:hover{background-color:var(--color-blue-700)}/* Regra .hover\:bg-brand-muted\/70:hover: cor de fundo. */
+.hover\:bg-brand-muted\/70:hover{background-color:#2563ebb3}/* Aplica estas regras quando o navegador oferece os recursos indicados. */
+@supports (color:color-mix(in lab, red, red)){/* Regra .hover\:bg-brand-muted\/70:hover: cor de fundo. */
+.hover\:bg-brand-muted\/70:hover{background-color:color-mix(in oklab, var(--color-brand-muted) 70%, transparent)}}/* Regra .hover\:bg-surface-muted:hover: cor de fundo. */
+.hover\:bg-surface-muted:hover{background-color:var(--color-surface-muted)}/* Regra .hover\:bg-white\/20:hover: cor de fundo. */
+.hover\:bg-white\/20:hover{background-color:#fff3}/* Aplica estas regras quando o navegador oferece os recursos indicados. */
+@supports (color:color-mix(in lab, red, red)){/* Regra .hover\:bg-white\/20:hover: cor de fundo. */
+.hover\:bg-white\/20:hover{background-color:color-mix(in oklab, var(--color-white) 20%, transparent)}}/* Regra .hover\:text-\[\#222833\]:hover: cor do texto. */
+.hover\:text-\[\#222833\]:hover{color:#222833}/* Regra .hover\:text-blue-800:hover: cor do texto. */
+.hover\:text-blue-800:hover{color:var(--color-blue-800)}/* Regra .hover\:underline:hover: propriedade text-decoration-line. */
+.hover\:underline:hover{text-decoration-line:underline}/* Regra .hover\:shadow-md:hover: variável de tema ou de estado --tw-shadow; sombra. */
+.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,#0000001a), 0 2px 4px -2px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}/* Regra .hover\:shadow-xl:hover: variável de tema ou de estado --tw-shadow; sombra. */
+.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}}/* Regra .focus-visible\:shadow-xl:focus-visible: variável de tema ou de estado --tw-shadow; sombra. */
+.focus-visible\:shadow-xl:focus-visible{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a), 0 8px 10px -6px var(--tw-shadow-color,#0000001a);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}/* Regra .focus-visible\:outline-2:focus-visible: propriedade outline-style; propriedade outline-width. */
+.focus-visible\:outline-2:focus-visible{outline-style:var(--tw-outline-style);outline-width:2px}/* Regra .focus-visible\:outline-accent:focus-visible: propriedade outline-color. */
+.focus-visible\:outline-accent:focus-visible{outline-color:var(--color-accent)}/* Responsividade ou preferência do dispositivo: (prefers-reduced-motion:reduce). */
+@media (prefers-reduced-motion:reduce){/* Regra .motion-reduce\:transition-none: comportamento da transição em property. */
+.motion-reduce\:transition-none{transition-property:none}}/* Responsividade ou preferência do dispositivo: (width>=48rem). */
+@media (width>=48rem){/* Regra .md\:mt-0: margem externa em top. */
+.md\:mt-0{margin-top:0}/* Regra .md\:mt-3: margem externa em top. */
+.md\:mt-3{margin-top:calc(var(--spacing) * 3)}/* Regra .md\:mr-15: margem externa em right. */
+.md\:mr-15{margin-right:calc(var(--spacing) * 15)}/* Regra .md\:mb-0: margem externa em bottom. */
+.md\:mb-0{margin-bottom:0}/* Regra .md\:mb-8: margem externa em bottom. */
+.md\:mb-8{margin-bottom:calc(var(--spacing) * 8)}/* Regra .md\:ml-2: margem externa em left. */
+.md\:ml-2{margin-left:calc(var(--spacing) * 2)}/* Regra .md\:contents: modo de organização dos elementos. */
+.md\:contents{display:contents}/* Regra .md\:flex: modo de organização dos elementos. */
+.md\:flex{display:flex}/* Regra .md\:hidden: modo de organização dos elementos. */
+.md\:hidden{display:none}/* Regra .md\:h-10: altura. */
+.md\:h-10{height:calc(var(--spacing) * 10)}/* Regra .md\:h-16: altura. */
+.md\:h-16{height:calc(var(--spacing) * 16)}/* Regra .md\:h-18\.75: altura. */
+.md\:h-18\.75{height:calc(var(--spacing) * 18.75)}/* Regra .md\:h-80: altura. */
+.md\:h-80{height:calc(var(--spacing) * 80)}/* Regra .md\:h-120: altura. */
+.md\:h-120{height:calc(var(--spacing) * 120)}/* Regra .md\:h-full: altura. */
+.md\:h-full{height:100%}/* Regra .md\:w-1: largura. */
+.md\:w-1{width:var(--spacing)}/* Regra .md\:w-1\/4: largura. */
+.md\:w-1\/4{width:25%}/* Regra .md\:w-4\/5: largura. */
+.md\:w-4\/5{width:80%}/* Regra .md\:w-10: largura. */
+.md\:w-10{width:calc(var(--spacing) * 10)}/* Regra .md\:w-55: largura. */
+.md\:w-55{width:calc(var(--spacing) * 55)}/* Regra .md\:w-80: largura. */
+.md\:w-80{width:calc(var(--spacing) * 80)}/* Regra .md\:w-85: largura. */
+.md\:w-85{width:calc(var(--spacing) * 85)}/* Regra .md\:grid-cols-2: colunas da grade. */
+.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}/* Regra .md\:grid-cols-3: colunas da grade. */
+.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}/* Regra .md\:grid-cols-4: colunas da grade. */
+.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}/* Regra .md\:flex-row: direção dos itens Flexbox. */
+.md\:flex-row{flex-direction:row}/* Regra .md\:items-end: alinhamento no eixo transversal. */
+.md\:items-end{align-items:flex-end}/* Regra .md\:gap-5: espaço entre itens. */
+.md\:gap-5{gap:calc(var(--spacing) * 5)}/* Regra .md\:gap-x-5: propriedade column-gap. */
+.md\:gap-x-5{column-gap:calc(var(--spacing) * 5)}/* Regra .md\:border-t-0: aparência da borda em top-style; aparência da borda em top-width. */
+.md\:border-t-0{border-top-style:var(--tw-border-style);border-top-width:0}/* Regra .md\:bg-surface: cor de fundo. */
+.md\:bg-surface{background-color:var(--color-surface)}/* Regra .md\:px-4: espaçamento interno em inline. */
+.md\:px-4{padding-inline:calc(var(--spacing) * 4)}/* Regra .md\:px-8: espaçamento interno em inline. */
+.md\:px-8{padding-inline:calc(var(--spacing) * 8)}/* Regra .md\:px-15: espaçamento interno em inline. */
+.md\:px-15{padding-inline:calc(var(--spacing) * 15)}/* Regra .md\:py-3: espaçamento interno em block. */
+.md\:py-3{padding-block:calc(var(--spacing) * 3)}/* Regra .md\:py-5: espaçamento interno em block. */
+.md\:py-5{padding-block:calc(var(--spacing) * 5)}/* Regra .md\:pt-0: espaçamento interno em top. */
+.md\:pt-0{padding-top:0}/* Regra .md\:pt-16: espaçamento interno em top. */
+.md\:pt-16{padding-top:calc(var(--spacing) * 16)}/* Regra .md\:pt-24: espaçamento interno em top. */
+.md\:pt-24{padding-top:calc(var(--spacing) * 24)}/* Regra .md\:text-3xl: tamanho da fonte; altura das linhas. */
+.md\:text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}/* Regra .md\:text-4xl: tamanho da fonte; altura das linhas. */
+.md\:text-4xl{font-size:var(--text-4xl);line-height:var(--tw-leading,var(--text-4xl--line-height))}/* Regra .md\:text-8xl: tamanho da fonte; altura das linhas. */
+.md\:text-8xl{font-size:var(--text-8xl);line-height:var(--tw-leading,var(--text-8xl--line-height))}/* Regra .md\:text-base: tamanho da fonte; altura das linhas. */
+.md\:text-base{font-size:var(--text-base);line-height:var(--tw-leading,var(--text-base--line-height))}/* Regra .md\:text-lg: tamanho da fonte; altura das linhas. */
+.md\:text-lg{font-size:var(--text-lg);line-height:var(--tw-leading,var(--text-lg--line-height))}/* Regra .md\:text-sm: tamanho da fonte; altura das linhas. */
+.md\:text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}/* Regra .md\:text-xl: tamanho da fonte; altura das linhas. */
+.md\:text-xl{font-size:var(--text-xl);line-height:var(--tw-leading,var(--text-xl--line-height))}/* Regra .md\:text-xs: tamanho da fonte; altura das linhas. */
+.md\:text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}/* Regra .md\:opacity-90: transparência. */
+.md\:opacity-90{opacity:.9}}/* Responsividade ou preferência do dispositivo: (width>=64rem). */
+@media (width>=64rem){/* Regra .lg\:grid-cols-5: colunas da grade. */
+.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}/* Regra .lg\:gap-6: espaço entre itens. */
+.lg\:gap-6{gap:calc(var(--spacing) * 6)}}@starting-style{/* Regra .starting\:translate-y-4: variável de tema ou de estado --tw-translate-y; deslocamento. */
+.starting\:translate-y-4{--tw-translate-y:calc(var(--spacing) * 4);translate:var(--tw-translate-x) var(--tw-translate-y)}/* Regra .starting\:opacity-0: transparência. */
+.starting\:opacity-0{opacity:0}}}/* Registra a variável --tw-translate-x e seus valores para as transições originais. */
+@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}/* Registra a variável --tw-translate-y e seus valores para as transições originais. */
+@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}/* Registra a variável --tw-translate-z e seus valores para as transições originais. */
+@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}/* Registra a variável --tw-rotate-x e seus valores para as transições originais. */
+@property --tw-rotate-x{syntax:"*";inherits:false}/* Registra a variável --tw-rotate-y e seus valores para as transições originais. */
+@property --tw-rotate-y{syntax:"*";inherits:false}/* Registra a variável --tw-rotate-z e seus valores para as transições originais. */
+@property --tw-rotate-z{syntax:"*";inherits:false}/* Registra a variável --tw-skew-x e seus valores para as transições originais. */
+@property --tw-skew-x{syntax:"*";inherits:false}/* Registra a variável --tw-skew-y e seus valores para as transições originais. */
+@property --tw-skew-y{syntax:"*";inherits:false}/* Registra a variável --tw-border-style e seus valores para as transições originais. */
+@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}/* Registra a variável --tw-gradient-position e seus valores para as transições originais. */
+@property --tw-gradient-position{syntax:"*";inherits:false}/* Registra a variável --tw-gradient-from e seus valores para as transições originais. */
+@property --tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}/* Registra a variável --tw-gradient-via e seus valores para as transições originais. */
+@property --tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}/* Registra a variável --tw-gradient-to e seus valores para as transições originais. */
+@property --tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}/* Registra a variável --tw-gradient-stops e seus valores para as transições originais. */
+@property --tw-gradient-stops{syntax:"*";inherits:false}/* Registra a variável --tw-gradient-via-stops e seus valores para as transições originais. */
+@property --tw-gradient-via-stops{syntax:"*";inherits:false}/* Registra a variável --tw-gradient-from-position e seus valores para as transições originais. */
+@property --tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}/* Registra a variável --tw-gradient-via-position e seus valores para as transições originais. */
+@property --tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}/* Registra a variável --tw-gradient-to-position e seus valores para as transições originais. */
+@property --tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}/* Registra a variável --tw-leading e seus valores para as transições originais. */
+@property --tw-leading{syntax:"*";inherits:false}/* Registra a variável --tw-font-weight e seus valores para as transições originais. */
+@property --tw-font-weight{syntax:"*";inherits:false}/* Registra a variável --tw-tracking e seus valores para as transições originais. */
+@property --tw-tracking{syntax:"*";inherits:false}/* Registra a variável --tw-shadow e seus valores para as transições originais. */
+@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}/* Registra a variável --tw-shadow-color e seus valores para as transições originais. */
+@property --tw-shadow-color{syntax:"*";inherits:false}/* Registra a variável --tw-shadow-alpha e seus valores para as transições originais. */
+@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}/* Registra a variável --tw-inset-shadow e seus valores para as transições originais. */
+@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}/* Registra a variável --tw-inset-shadow-color e seus valores para as transições originais. */
+@property --tw-inset-shadow-color{syntax:"*";inherits:false}/* Registra a variável --tw-inset-shadow-alpha e seus valores para as transições originais. */
+@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}/* Registra a variável --tw-ring-color e seus valores para as transições originais. */
+@property --tw-ring-color{syntax:"*";inherits:false}/* Registra a variável --tw-ring-shadow e seus valores para as transições originais. */
+@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}/* Registra a variável --tw-inset-ring-color e seus valores para as transições originais. */
+@property --tw-inset-ring-color{syntax:"*";inherits:false}/* Registra a variável --tw-inset-ring-shadow e seus valores para as transições originais. */
+@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}/* Registra a variável --tw-ring-inset e seus valores para as transições originais. */
+@property --tw-ring-inset{syntax:"*";inherits:false}/* Registra a variável --tw-ring-offset-width e seus valores para as transições originais. */
+@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}/* Registra a variável --tw-ring-offset-color e seus valores para as transições originais. */
+@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}/* Registra a variável --tw-ring-offset-shadow e seus valores para as transições originais. */
+@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}/* Registra a variável --tw-blur e seus valores para as transições originais. */
+@property --tw-blur{syntax:"*";inherits:false}/* Registra a variável --tw-brightness e seus valores para as transições originais. */
+@property --tw-brightness{syntax:"*";inherits:false}/* Registra a variável --tw-contrast e seus valores para as transições originais. */
+@property --tw-contrast{syntax:"*";inherits:false}/* Registra a variável --tw-grayscale e seus valores para as transições originais. */
+@property --tw-grayscale{syntax:"*";inherits:false}/* Registra a variável --tw-hue-rotate e seus valores para as transições originais. */
+@property --tw-hue-rotate{syntax:"*";inherits:false}/* Registra a variável --tw-invert e seus valores para as transições originais. */
+@property --tw-invert{syntax:"*";inherits:false}/* Registra a variável --tw-opacity e seus valores para as transições originais. */
+@property --tw-opacity{syntax:"*";inherits:false}/* Registra a variável --tw-saturate e seus valores para as transições originais. */
+@property --tw-saturate{syntax:"*";inherits:false}/* Registra a variável --tw-sepia e seus valores para as transições originais. */
+@property --tw-sepia{syntax:"*";inherits:false}/* Registra a variável --tw-drop-shadow e seus valores para as transições originais. */
+@property --tw-drop-shadow{syntax:"*";inherits:false}/* Registra a variável --tw-drop-shadow-color e seus valores para as transições originais. */
+@property --tw-drop-shadow-color{syntax:"*";inherits:false}/* Registra a variável --tw-drop-shadow-alpha e seus valores para as transições originais. */
+@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}/* Registra a variável --tw-drop-shadow-size e seus valores para as transições originais. */
+@property --tw-drop-shadow-size{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-blur e seus valores para as transições originais. */
+@property --tw-backdrop-blur{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-brightness e seus valores para as transições originais. */
+@property --tw-backdrop-brightness{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-contrast e seus valores para as transições originais. */
+@property --tw-backdrop-contrast{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-grayscale e seus valores para as transições originais. */
+@property --tw-backdrop-grayscale{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-hue-rotate e seus valores para as transições originais. */
+@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-invert e seus valores para as transições originais. */
+@property --tw-backdrop-invert{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-opacity e seus valores para as transições originais. */
+@property --tw-backdrop-opacity{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-saturate e seus valores para as transições originais. */
+@property --tw-backdrop-saturate{syntax:"*";inherits:false}/* Registra a variável --tw-backdrop-sepia e seus valores para as transições originais. */
+@property --tw-backdrop-sepia{syntax:"*";inherits:false}/* Registra a variável --tw-duration e seus valores para as transições originais. */
+@property --tw-duration{syntax:"*";inherits:false}/* Registra a variável --tw-ease e seus valores para as transições originais. */
+@property --tw-ease{syntax:"*";inherits:false}/* Registra a variável --tw-scale-x e seus valores para as transições originais. */
+@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}/* Registra a variável --tw-scale-y e seus valores para as transições originais. */
+@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}/* Registra a variável --tw-scale-z e seus valores para as transições originais. */
+@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}/* Registra a variável --tw-outline-style e seus valores para as transições originais. */
+@property --tw-outline-style{syntax:"*";inherits:false;initial-value:solid}
 

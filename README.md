@@ -25,13 +25,13 @@ Não foi realizada comparação visual por capturas de navegador nesta execuçã
 ## Quantidade de linhas
 
 - `index.html`: 1.732 linhas.
-- `style.css`: 1.001 linhas.
+- `style.css`: 1.478 linhas.
 - `script.js`: 249 linhas.
 
 As quebras no HTML ficam dentro das tags para não introduzir espaços nos textos. O CSS preserva a ordem das regras e a cascata original. O HTML e o CSS superam, respectivamente, os mínimos de 400 e 300 linhas.
 
 ## Comentários e verificação
 
-Os comentários identificam a origem da estrutura, o CSS compilado, os dados e as imagens, e explicam a navegação, o bloqueio de rolagem, os limites do carrossel, as comparações dos filtros e o estado vazio. O CSS mantém as camadas de tema, estilos básicos e utilitários originais.
+Os comentários identificam a origem da estrutura, o CSS compilado, os dados e as imagens, e explicam a navegação, o bloqueio de rolagem, os limites do carrossel, as comparações dos filtros e o estado vazio. Todos os blocos de regras e condições do CSS possuem comentários explicando sua função. O CSS mantém as camadas de tema, estilos básicos e utilitários originais.
 
 A versão anterior deste repositório havia alterado o layout. Esta revisão substitui essa implementação pela conversão baseada diretamente no original.
