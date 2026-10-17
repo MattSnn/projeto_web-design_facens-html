@@ -78,12 +78,13 @@
 }
 /* Camada theme: tokens de tema (fontes, cores, espaçamentos e tamanhos) definidos no index.css original. */
 @layer theme {
-    /* Regra :root,:host: define 77 variáveis (tokens) usadas pelas demais regras. */
+    /* Regra :root,:host: define 84 variáveis (tokens) usadas pelas demais regras. */
     :root, :host {
         --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
         --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         --color-blue-50: oklch(97% .014 254.604);
+        --color-blue-100: oklch(93.2% .032 255.585);
         --color-blue-200: oklch(88.2% .059 254.128);
         --color-blue-400: oklch(70.7% .165 254.624);
         --color-blue-600: oklch(54.6% .245 262.881);
@@ -92,6 +93,12 @@
         --color-blue-950: oklch(28.2% .091 267.935);
         --color-indigo-900: oklch(35.9% .144 278.697);
         --color-indigo-950: oklch(25.7% .09 281.288);
+        --color-slate-50: oklch(98.4% .003 247.858);
+        --color-slate-200: oklch(92.9% .013 255.508);
+        --color-slate-400: oklch(70.4% .04 256.788);
+        --color-slate-500: oklch(55.4% .046 257.417);
+        --color-slate-600: oklch(44.6% .043 257.281);
+        --color-slate-900: oklch(20.8% .042 265.755);
         --color-gray-200: oklch(92.8% .006 264.531);
         --color-gray-300: oklch(87.2% .01 258.338);
         --color-gray-400: oklch(70.7% .022 261.325);
@@ -487,10 +494,6 @@
     .z-50 {
         z-index: 50;
     }
-    /* Regra .col-span-1: propriedade grid-column. */
-    .col-span-1 {
-        grid-column: span 1/span 1;
-    }
     /* Regra .m-1: margem externa. */
     .m-1 {
         margin: var(--spacing);
@@ -510,6 +513,10 @@
     /* Regra .mt-2: margem externa superior. */
     .mt-2 {
         margin-top: calc(var(--spacing) * 2);
+    }
+    /* Regra .mt-3: margem externa superior. */
+    .mt-3 {
+        margin-top: calc(var(--spacing) * 3);
     }
     /* Regra .mt-5: margem externa superior. */
     .mt-5 {
@@ -610,9 +617,17 @@
     .h-48 {
         height: calc(var(--spacing) * 48);
     }
+    /* Regra .h-52: altura. */
+    .h-52 {
+        height: calc(var(--spacing) * 52);
+    }
     /* Regra .h-55: altura. */
     .h-55 {
         height: calc(var(--spacing) * 55);
+    }
+    /* Regra .h-56: altura. */
+    .h-56 {
+        height: calc(var(--spacing) * 56);
     }
     /* Regra .h-64: altura. */
     .h-64 {
@@ -625,6 +640,10 @@
     /* Regra .h-screen: altura. */
     .h-screen {
         height: 100vh;
+    }
+    /* Regra .min-h-\[calc\(100vh-5rem\)\]: altura mínima. */
+    .min-h-\[calc\(100vh-5rem\)\] {
+        min-height: calc(100vh - 5rem);
     }
     /* Regra .min-h-screen: altura mínima. */
     .min-h-screen {
@@ -796,6 +815,30 @@
     .gap-6 {
         gap: calc(var(--spacing) * 6);
     }
+    /* Regra .gap-8: espaço entre os itens. */
+    .gap-8 {
+        gap: calc(var(--spacing) * 8);
+    }
+    /* Regra .gap-20: espaço entre os itens. */
+    .gap-20 {
+        gap: calc(var(--spacing) * 20);
+    }
+    /* Regra .gap-x-6: espaço entre colunas. */
+    .gap-x-6 {
+        column-gap: calc(var(--spacing) * 6);
+    }
+    /* Regra .gap-x-8: espaço entre colunas. */
+    .gap-x-8 {
+        column-gap: calc(var(--spacing) * 8);
+    }
+    /* Regra .gap-y-2: espaço entre linhas. */
+    .gap-y-2 {
+        row-gap: calc(var(--spacing) * 2);
+    }
+    /* Regra .gap-y-3: espaço entre linhas. */
+    .gap-y-3 {
+        row-gap: calc(var(--spacing) * 3);
+    }
     /* Regra .overflow-hidden: conteúdo que ultrapassa a caixa. */
     .overflow-hidden {
         overflow: hidden;
@@ -846,6 +889,11 @@
         border-style: var(--tw-border-style);
         border-width: 2px;
     }
+    /* Regra .border-y: estilo das bordas superior e inferior; espessura das bordas superior e inferior. */
+    .border-y {
+        border-block-style: var(--tw-border-style);
+        border-block-width: 1px;
+    }
     /* Regra .border-t: estilo da borda superior; espessura da borda superior. */
     .border-t {
         border-top-style: var(--tw-border-style);
@@ -883,6 +931,10 @@
     .border-gray-300 {
         border-color: var(--color-gray-300);
     }
+    /* Regra .border-slate-200: cor da borda. */
+    .border-slate-200 {
+        border-color: var(--color-slate-200);
+    }
     /* Regra .border-white\/20: cor da borda. */
     .border-white\/20 {
         border-color: #fff3;
@@ -913,6 +965,10 @@
             background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
         }
     }
+    /* Regra .bg-blue-100: cor de fundo. */
+    .bg-blue-100 {
+        background-color: var(--color-blue-100);
+    }
     /* Regra .bg-brand-dark: cor de fundo. */
     .bg-brand-dark {
         background-color: var(--color-brand-dark);
@@ -928,6 +984,14 @@
     /* Regra .bg-indigo-900: cor de fundo. */
     .bg-indigo-900 {
         background-color: var(--color-indigo-900);
+    }
+    /* Regra .bg-slate-50: cor de fundo. */
+    .bg-slate-50 {
+        background-color: var(--color-slate-50);
+    }
+    /* Regra .bg-slate-200: cor de fundo. */
+    .bg-slate-200 {
+        background-color: var(--color-slate-200);
     }
     /* Regra .bg-white: cor de fundo. */
     .bg-white {
@@ -1171,6 +1235,10 @@
     .px-8 {
         padding-inline: calc(var(--spacing) * 8);
     }
+    /* Regra .py-1: espaçamento interno em cima e embaixo. */
+    .py-1 {
+        padding-block: var(--spacing);
+    }
     /* Regra .py-2: espaçamento interno em cima e embaixo. */
     .py-2 {
         padding-block: calc(var(--spacing) * 2);
@@ -1368,6 +1436,10 @@
     .text-blue-600 {
         color: var(--color-blue-600);
     }
+    /* Regra .text-blue-700: cor do texto. */
+    .text-blue-700 {
+        color: var(--color-blue-700);
+    }
     /* Regra .text-brand: cor do texto. */
     .text-brand {
         color: var(--color-brand);
@@ -1414,6 +1486,22 @@
     /* Regra .text-on-brand: cor do texto. */
     .text-on-brand {
         color: var(--color-on-brand);
+    }
+    /* Regra .text-slate-400: cor do texto. */
+    .text-slate-400 {
+        color: var(--color-slate-400);
+    }
+    /* Regra .text-slate-500: cor do texto. */
+    .text-slate-500 {
+        color: var(--color-slate-500);
+    }
+    /* Regra .text-slate-600: cor do texto. */
+    .text-slate-600 {
+        color: var(--color-slate-600);
+    }
+    /* Regra .text-slate-900: cor do texto. */
+    .text-slate-900 {
+        color: var(--color-slate-900);
     }
     /* Regra .text-white: cor do texto. */
     .text-white {
@@ -1680,10 +1768,6 @@
     }
     /* Media query: aplica as regras abaixo a partir de 48rem (768px, breakpoint md: tablet/desktop). */
     @media (width>=48rem) {
-        /* Regra .md\:col-span-2: propriedade grid-column. */
-        .md\:col-span-2 {
-            grid-column: span 2/span 2;
-        }
         /* Regra .md\:mt-0: margem externa superior. */
         .md\:mt-0 {
             margin-top: 0;
@@ -1736,9 +1820,9 @@
         .md\:h-80 {
             height: calc(var(--spacing) * 80);
         }
-        /* Regra .md\:h-120: altura. */
-        .md\:h-120 {
-            height: calc(var(--spacing) * 120);
+        /* Regra .md\:h-96: altura. */
+        .md\:h-96 {
+            height: calc(var(--spacing) * 96);
         }
         /* Regra .md\:h-full: altura. */
         .md\:h-full {
@@ -1840,6 +1924,11 @@
         /* Regra .md\:pt-24: espaçamento interno superior. */
         .md\:pt-24 {
             padding-top: calc(var(--spacing) * 24);
+        }
+        /* Regra .md\:text-2xl: tamanho da fonte; altura das linhas. */
+        .md\:text-2xl {
+            font-size: var(--text-2xl);
+            line-height: var(--tw-leading,var(--text-2xl--line-height));
         }
         /* Regra .md\:text-3xl: tamanho da fonte; altura das linhas. */
         .md\:text-3xl {
