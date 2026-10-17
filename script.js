@@ -9,7 +9,7 @@
 
 /* Endereço das imagens originais no GitHub, fixado no commit convertido.
    Assim a versão HTML não precisa de uma pasta de imagens própria. */
-const ASSET_BASE = "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/a4aa705697c48669398caf25c1fbb4b352fd0a1b/";
+const ASSET_BASE = "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/0547370f583f7f9d8d1abd83902d2f68fc76b54a/";
 
 /* Nome do arquivo usado no HTML (data-asset ou var(--asset-...)) -> URL da imagem original. */
 const originalAssets = {
@@ -28,7 +28,7 @@ const originalAssets = {
 
 /* Cópia fiel de src/data/prediosLista.ts do original.
    - price: valor total na venda ou valor mensal no aluguel;
-   - status, tag, endereço, características, comodidades e proximidades: página do imóvel;
+   - condoFee: condomínio por mês; iptu: IPTU por ano;
    - mainImg/images: nome do arquivo de imagem (ver originalAssets). */
 const prediosLista = [
     {
@@ -476,9 +476,11 @@ const navBarLinks = {
         { id: "contato", label: "contato" }
     ],
     imovelPage: [
-        { id: "alugar", label: "Alugar" },
-        { id: "comprar", label: "Comprar" },
-        { id: "contato", label: "contato" }
+        { id: "fotos", label: "Fotos" },
+        { id: "sobre", label: "Sobre" },
+        { id: "calculadora", label: "Calculadora" },
+        { id: "localizacao", label: "Localização" },
+        { id: "planta", label: "Planta" }
     ]
 };
 
@@ -671,6 +673,7 @@ function fillImovel(container, predio) {
     field("description").textContent = predio.description;
     fillList(container, "amenities", predio.amenities.map((amenite) => [amenite]));
     fillList(container, "nearby", predio.nearby.map((item) => [item.label, " — ", item.distance]));
+    fillPriceCard(container.querySelector("aside"), predio);
 }
 
 /* Repete o <li> modelo do template para cada item da lista (equivale ao .map do JSX).
@@ -687,13 +690,112 @@ function fillList(container, name, items) {
 
 /* Galeria (PicturesDisplay.tsx): cada foto mostra o alerta original "Ver mais fotos". */
 function bindGallery() {
-    pageContainer.querySelector("main").firstElementChild.querySelectorAll("button").forEach((button) => {
+    pageContainer.querySelectorAll("#fotos button").forEach((button) => {
         button.addEventListener("click", () => alert("Ver mais fotos"));
     });
 }
 
 /* ============================================================
-   10. INICIALIZAÇÃO
+   10. CARD DE PREÇO E SIMULADOR DE FINANCIAMENTO (PriceCard.tsx)
+   ============================================================ */
+
+/* Moeda em reais, sem centavos, igual ao Intl.NumberFormat do original. */
+const brl = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    maximumFractionDigits: 0
+});
+
+/* Tabela Price: todas as parcelas têm o mesmo valor.
+   PMT = financiado * i / (1 - (1 + i)^-meses), onde i é a taxa mensal equivalente à anual. */
+function calcParcela(financiado, taxaAnual, meses) {
+    if (financiado <= 0 || meses <= 0) return 0;
+    const i = Math.pow(1 + taxaAnual / 100, 1 / 12) - 1;
+    if (i === 0) return financiado / meses;
+    return (financiado * i) / (1 - Math.pow(1 + i, -meses));
+}
+
+/* Card de preço: venda mostra a parcela e o simulador; aluguel mostra o custo mensal total. */
+function fillPriceCard(card, predio) {
+    const field = (name) => card.querySelector('[data-field="' + name + '"]');
+    const isAluguel = predio.status === "Aluguel";
+    const toggle = field("toggle");
+    const simulator = field("simulator");
+    const note = field("note");
+
+    /* Estados do PriceCard (useState): simulador fechado, 20% de entrada, 30 anos e 10,5% ao ano. */
+    let mostrarSimulador = false;
+    let entradaPct = 20;
+    let anos = 30;
+    let taxaAnual = 10.5;
+    simulator.remove();
+
+    field("label").textContent = isAluguel ? "Aluguel" : "Valor";
+    field("price").prepend(brl.format(predio.price));
+    if (!isAluguel) field("perMonth").remove();
+    field("condoFee").textContent = brl.format(predio.condoFee) + "/mês";
+    field("iptu").textContent = brl.format(predio.iptu) + "/ano";
+    field("areaUtil").textContent = predio.area;
+
+    if (isAluguel) {
+        /* Aluguel: soma aluguel, condomínio e 1/12 do IPTU anual; não há simulador. */
+        const totalMensal = predio.price + predio.condoFee + predio.iptu / 12;
+        note.textContent = brl.format(totalMensal) + "/mês com condomínio e IPTU";
+        toggle.remove();
+        return;
+    }
+
+    /* O simulador fica fora da página enquanto está fechado, por isso é consultado diretamente. */
+    const simField = (name) => simulator.querySelector('[data-field="' + name + '"]');
+    const range = simulator.querySelector('input[type="range"]');
+    const select = simulator.querySelector("select");
+    const juros = simulator.querySelector('input[type="number"]');
+
+    /* Recalcula entrada, valor financiado e parcela, e atualiza todos os textos. */
+    function render() {
+        const entrada = predio.price * (entradaPct / 100);
+        const financiado = predio.price - entrada;
+        const parcela = calcParcela(financiado, taxaAnual, anos * 12);
+        note.textContent = "ou " + brl.format(parcela) + "/mês no financiamento";
+        toggle.textContent = mostrarSimulador ? "Fechar simulador" : "Simular financiamento";
+        simField("entrada").replaceChildren(String(entradaPct), "% · ", brl.format(entrada));
+        simField("parcela").textContent = brl.format(parcela);
+        simField("financiado").replaceChildren(brl.format(financiado), " financiados em ", String(anos * 12), " meses");
+    }
+
+    /* Botão "Simular financiamento" / "Fechar simulador": mostra ou esconde a calculadora. */
+    toggle.addEventListener("click", () => {
+        mostrarSimulador = !mostrarSimulador;
+        if (mostrarSimulador) {
+            toggle.after(simulator);
+        } else {
+            simulator.remove();
+        }
+        render();
+    });
+    /* Entrada: controle deslizante de 10% a 80%, de 5 em 5. */
+    range.addEventListener("input", () => {
+        entradaPct = Number(range.value);
+        render();
+    });
+    /* Prazo: 10 a 35 anos. */
+    select.addEventListener("change", () => {
+        anos = Number(select.value);
+        render();
+    });
+    /* Juros ao ano: campo vazio ou inválido vale 0, como Number(e.target.value) || 0 no original. */
+    juros.addEventListener("input", () => {
+        taxaAnual = Number(juros.value) || 0;
+        if (taxaAnual === 0 && juros.value === "") {
+            juros.value = "0";
+        }
+        render();
+    });
+    render();
+}
+
+/* ============================================================
+   11. INICIALIZAÇÃO
    ============================================================ */
 
 /* Liga os eventos da página que acabou de ser exibida. */

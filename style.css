@@ -78,7 +78,7 @@
 }
 /* Camada theme: tokens de tema (fontes, cores, espaçamentos e tamanhos) definidos no index.css original. */
 @layer theme {
-    /* Regra :root,:host: define 84 variáveis (tokens) usadas pelas demais regras. */
+    /* Regra :root,:host: define 86 variáveis (tokens) usadas pelas demais regras. */
     :root, :host {
         --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -95,6 +95,7 @@
         --color-indigo-950: oklch(25.7% .09 281.288);
         --color-slate-50: oklch(98.4% .003 247.858);
         --color-slate-200: oklch(92.9% .013 255.508);
+        --color-slate-300: oklch(86.9% .022 252.894);
         --color-slate-400: oklch(70.4% .04 256.788);
         --color-slate-500: oklch(55.4% .046 257.417);
         --color-slate-600: oklch(44.6% .043 257.281);
@@ -136,6 +137,7 @@
         --font-weight-bold: 700;
         --font-weight-black: 900;
         --tracking-tight: -.025em;
+        --tracking-wide: .025em;
         --tracking-wider: .05em;
         --leading-tight: 1.25;
         --leading-relaxed: 1.625;
@@ -522,6 +524,10 @@
     .mt-5 {
         margin-top: calc(var(--spacing) * 5);
     }
+    /* Regra .mt-6: margem externa superior. */
+    .mt-6 {
+        margin-top: calc(var(--spacing) * 6);
+    }
     /* Regra .mt-auto: margem externa superior. */
     .mt-auto {
         margin-top: auto;
@@ -604,6 +610,10 @@
     /* Regra .h-10: altura. */
     .h-10 {
         height: calc(var(--spacing) * 10);
+    }
+    /* Regra .h-12: altura. */
+    .h-12 {
+        height: calc(var(--spacing) * 12);
     }
     /* Regra .h-13: altura. */
     .h-13 {
@@ -712,6 +722,10 @@
     /* Regra .max-w-xs: largura máxima. */
     .max-w-xs {
         max-width: var(--container-xs);
+    }
+    /* Regra .min-w-0: largura mínima. */
+    .min-w-0 {
+        min-width: 0;
     }
     /* Regra .flex-1: quanto o item cresce/encolhe no Flexbox. */
     .flex-1 {
@@ -934,6 +948,10 @@
     /* Regra .border-slate-200: cor da borda. */
     .border-slate-200 {
         border-color: var(--color-slate-200);
+    }
+    /* Regra .border-slate-300: cor da borda. */
+    .border-slate-300 {
+        border-color: var(--color-slate-300);
     }
     /* Regra .border-white\/20: cor da borda. */
     .border-white\/20 {
@@ -1203,6 +1221,10 @@
     .p-3 {
         padding: calc(var(--spacing) * 3);
     }
+    /* Regra .p-4: espaçamento interno (padding). */
+    .p-4 {
+        padding: calc(var(--spacing) * 4);
+    }
     /* Regra .p-5: espaçamento interno (padding). */
     .p-5 {
         padding: calc(var(--spacing) * 5);
@@ -1262,6 +1284,10 @@
     /* Regra .py-20: espaçamento interno em cima e embaixo. */
     .py-20 {
         padding-block: calc(var(--spacing) * 20);
+    }
+    /* Regra .pt-5: espaçamento interno superior. */
+    .pt-5 {
+        padding-top: calc(var(--spacing) * 5);
     }
     /* Regra .pt-6: espaçamento interno superior. */
     .pt-6 {
@@ -1403,6 +1429,11 @@
         --tw-tracking: var(--tracking-tight);
         letter-spacing: var(--tracking-tight);
     }
+    /* Regra .tracking-wide: variável interna --tw-tracking, usada para compor efeitos como sombras, gradientes e transformações; espaçamento entre letras. */
+    .tracking-wide {
+        --tw-tracking: var(--tracking-wide);
+        letter-spacing: var(--tracking-wide);
+    }
     /* Regra .tracking-wider: variável interna --tw-tracking, usada para compor efeitos como sombras, gradientes e transformações; espaçamento entre letras. */
     .tracking-wider {
         --tw-tracking: var(--tracking-wider);
@@ -1521,6 +1552,10 @@
     /* Regra .uppercase: transformação do texto (maiúsculas). */
     .uppercase {
         text-transform: uppercase;
+    }
+    /* Regra .accent-brand-muted: cor de destaque de controles (ex.: range). */
+    .accent-brand-muted {
+        accent-color: var(--color-brand-muted);
     }
     /* Regra .opacity-0: transparência. */
     .opacity-0 {
@@ -1706,6 +1741,10 @@
             .hover\:bg-brand-muted\/70:hover {
                 background-color: color-mix(in oklab, var(--color-brand-muted) 70%, transparent);
             }
+        }
+        /* Regra .hover\:bg-slate-50:hover: cor de fundo. */
+        .hover\:bg-slate-50:hover {
+            background-color: var(--color-slate-50);
         }
         /* Regra .hover\:bg-surface-muted:hover: cor de fundo. */
         .hover\:bg-surface-muted:hover {
@@ -1977,9 +2016,25 @@
     }
     /* Media query: aplica as regras abaixo a partir de 64rem (1024px, breakpoint lg: desktop). */
     @media (width>=64rem) {
+        /* Regra .lg\:sticky: define o tipo de posicionamento. */
+        .lg\:sticky {
+            position: sticky;
+        }
+        /* Regra .lg\:top-24: distância a partir do topo. */
+        .lg\:top-24 {
+            top: calc(var(--spacing) * 24);
+        }
+        /* Regra .lg\:w-88: largura. */
+        .lg\:w-88 {
+            width: calc(var(--spacing) * 88);
+        }
         /* Regra .lg\:grid-cols-5: colunas da grade. */
         .lg\:grid-cols-5 {
             grid-template-columns: repeat(5,minmax(0,1fr));
+        }
+        /* Regra .lg\:flex-row: direção dos itens no Flexbox. */
+        .lg\:flex-row {
+            flex-direction: row;
         }
         /* Regra .lg\:gap-6: espaço entre os itens. */
         .lg\:gap-6 {

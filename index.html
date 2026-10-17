@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- index.html — estrutura do ImobiFaces sem framework. O HTML foi gerado a partir dos componentes
-     React do projeto original (commit a4aa705); o CSS fica em style.css e o comportamento em script.js. -->
+     React do projeto original (commit 0547370); o CSS fica em style.css e o comportamento em script.js. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -1848,7 +1848,8 @@
 <!-- ImovelPage: página de detalhes; o script.js preenche os campos marcados com data-field. -->
 <template id="template-detail"><div
     class="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col"><main
-    class="flex-col gap-20 w-full max-w-screen-2xl mx-auto px-4 md:px-15 pb-10"><div
+    class="flex-col gap-20 w-full max-w-screen-2xl mx-auto px-4 md:px-15 pb-10"><!-- Galeria de fotos: foto principal e quatro miniaturas (cada uma mostra o alerta Ver mais fotos). --><div
+    id="fotos"
     class="grid grid-cols-1 md:grid-cols-2 gap-3 h-52 md:h-96"><button
     class="group relative h-64 md:h-full w-full overflow-hidden rounded-2xl text-white"><img
     data-asset="predio-1.jpg"
@@ -1878,7 +1879,10 @@
 /><span
     class="pointer-events-none absolute inset-0 bg-linear-to-t from-indigo-950/80 via-indigo-950/15 to-transparent"></span><span
     class="absolute inset-x-0 bottom-0 text-right text-lg p-3">Ver mais fotos</span></button></div></div><div
-    class="flex flex-col gap-8"><header><div
+    class="flex flex-col gap-8 mt-5"><!-- Sobre: cabeçalho do imóvel, características, descrição e comodidades. --><div
+    id="sobre"
+    class="w-full flex flex-col lg:flex-row gap-8"><div
+    class="flex-1 min-w-0"><header><div
     class="flex gap-2 mb-2"><span
     class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700"
     data-field="status"></span><span
@@ -1905,12 +1909,84 @@
     class="text-xl md:text-2xl font-semibold text-brand-dark mb-3">Sobre o imóvel</h2><!-- Comodidades do condomínio: um item por comodidade do imóvel. --><ul
     class="grid grid-cols-2 md:grid-cols-4 gap-3"
     data-list="amenities"><li
-    class="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm text-brand-dark"></li></ul></div><div><h2
+    class="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm text-brand-dark"></li></ul></div></div><!-- Coluna do card de preço e do simulador de financiamento. --><div
+    id="calculadora"
+    class="lg:w-88 shrink-0"><!-- Card de preço: valor, custos mensais, Agendar visita e simulador de financiamento. --><aside
+    class="lg:sticky lg:top-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><p
+    class="text-xs uppercase tracking-wide text-slate-400"
+    data-field="label"></p><p
+    class="mt-1 text-3xl md:text-4xl font-bold text-brand-dark"
+    data-field="price"><span
+    class="text-base font-medium text-slate-500"
+    data-field="perMonth">/mês</span></p><p
+    class="mt-1 text-sm text-slate-500"
+    data-field="note"></p><dl
+    class="mt-5 flex flex-col gap-3 border-t border-slate-200 pt-5 text-sm"><div
+    class="flex justify-between gap-4"><dt
+    class="text-slate-500">Condomínio</dt><dd
+    class="font-medium text-brand-dark"
+    data-field="condoFee"></dd></div><div
+    class="flex justify-between gap-4"><dt
+    class="text-slate-500">IPTU</dt><dd
+    class="font-medium text-brand-dark"
+    data-field="iptu"></dd></div><div
+    class="flex justify-between gap-4"><dt
+    class="text-slate-500">Área útil</dt><dd
+    class="font-medium text-brand-dark"
+    data-field="areaUtil"></dd></div></dl><a
+    href="#contato"
+    class="mt-6 flex h-12 w-full items-center justify-center rounded-full bg-accent font-bold text-on-accent hover:bg-accent-hover transition">Agendar visita</a><button
+    type="button"
+    data-field="toggle"
+    class="mt-3 h-12 w-full rounded-full border border-slate-300 font-medium text-brand-dark hover:bg-slate-50 transition"></button><div
+    data-field="simulator"
+    class="mt-5 flex flex-col gap-4 rounded-xl bg-slate-50 p-4 text-sm"><label
+    class="flex flex-col gap-2"><span
+    class="flex justify-between gap-2 text-slate-600">Entrada<strong
+    class="text-brand-dark"
+    data-field="entrada"></strong></span><input
+    type="range"
+    min="10"
+    max="80"
+    step="5"
+    class="accent-brand-muted"
+    value="20"
+/></label><label
+    class="flex flex-col gap-2"><span
+    class="text-slate-600">Prazo</span><!-- Filtro: o valor escolhido é comparado com os dados no script.js. --><select
+    class="rounded-lg border border-slate-300 bg-white px-3 py-2 text-brand-dark"><option
+    value="10">10 anos</option><option
+    value="15">15 anos</option><option
+    value="20">20 anos</option><option
+    value="25">25 anos</option><option
+    value="30"
+    selected="">30 anos</option><option
+    value="35">35 anos</option></select></label><label
+    class="flex flex-col gap-2"><span
+    class="text-slate-600">Juros (% ao ano)</span><input
+    type="number"
+    min="0"
+    max="30"
+    step="0.1"
+    class="rounded-lg border border-slate-300 bg-white px-3 py-2 text-brand-dark"
+    value="10.5"
+/></label><div
+    class="rounded-lg border border-slate-200 bg-white p-4 text-center"><p
+    class="text-xs text-slate-400">Parcela estimada</p><p
+    class="text-2xl font-bold text-brand-dark"
+    data-field="parcela"></p><p
+    class="mt-1 text-xs text-slate-500"
+    data-field="financiado"></p></div><p
+    class="text-xs text-slate-400">Simulação pela tabela Price, sem seguros e taxas. Valores meramente ilustrativos.</p></div></aside></div></div><!-- Localização: espaço da imagem da região e lugares próximos. --><div
+    id="localizacao"><h2
     class="text-xl md:text-2xl font-semibold text-brand-dark mb-4">Localização</h2><div
     class="h-56 md:h-80 w-full rounded-2xl bg-slate-200 flex items-center justify-center text-slate-400">Imagem da região (a encontrar)</div><ul
     class="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500"
     data-list="nearby"><li
-    class="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm text-brand-dark"></li></ul></div></div></main><!-- Rodapé: apresentação, equipe que desenvolveu e direitos autorais. --><footer
+    class="flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm text-brand-dark"></li></ul></div><!-- Planta: espaço reservado para a planta do imóvel. --><div
+    id="planta"><h2
+    class="text-xl md:text-2xl font-semibold text-brand-dark mb-4">Planta</h2><div
+    class="h-56 md:h-80 w-full rounded-2xl bg-slate-200 flex items-center justify-center text-slate-400">Futura Planta (a encontrar)</div></div></div></main><!-- Rodapé: apresentação, equipe que desenvolveu e direitos autorais. --><footer
     class="bg-brand-dark w-full text-brand-light py-4 px-4"><div
     class="max-w-6xl mx-auto"><div
     class="md:flex w-full"><div
