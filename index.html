@@ -1,18 +1,23 @@
 <!doctype html>
-<!-- Conversão fiel da estrutura gerada pelos componentes React originais. -->
+<!-- index.html — estrutura do ImobiFaces sem framework. O HTML foi gerado a partir dos componentes
+     React do projeto original (commit 5cbcdd9); o CSS fica em style.css e o comportamento em script.js. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <!-- Ajusta a largura ao dispositivo para o layout responsivo funcionar no celular. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>projeto_web-design_facens</title>
-    <!-- O CSS original compilado é externo; não há Tailwind em execução. -->
+    <!-- CSS externo, incluído pela tag link. -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Ícone da aba; o endereço da imagem é aplicado pelo script.js. -->
     <link rel="icon" id="favicon" type="image/svg+xml" />
+    <!-- JavaScript externo; defer executa o script depois que o HTML é lido. -->
     <script src="script.js" defer></script>
 </head>
 <body>
-<!-- Página inicial: mesma árvore de elementos produzida por App.tsx. -->
-<div id="root"><div><div><!-- Barra de navegação original com marca, links e botão do menu. --><nav
+<!-- Página inicial: mesma árvore de elementos produzida por App.tsx (navbar + conteúdo da página). -->
+<!-- O script.js troca apenas o conteúdo dentro de div.pt-20 ao navegar entre as páginas. -->
+<div id="root"><div><div><!-- Barra de navegação fixa: marca ImobiFaces, links da página atual e botão do menu. --><nav
     class="bg-white/95 w-full z-50 px-4 md:py-5 md:px-15 top-0 left-0 fixed flex items-center gap-3 "><div
     class="font font-[&#x27;Times_New_Roman&#x27;] flex-1 text-lg md:text-3xl"><a
     href="#inicio"
@@ -28,15 +33,15 @@
     class="transition-all hover:text-[#222833]">contato</a></div><div
     class="hidden md:flex flex-1 justify-end"><a
     href="#contato"
-    class="bg-brand-muted font-bold text-white text-sm md:text-xs px-3 py-2 md:px-4 md:py-3 rounded-3xl whitespace-nowrap hover:bg-blue-700 transition-all hover:scale-110 duration-300">Falar com um especialista</a></div><button
+    class="bg-brand-muted font-bold text-white text-sm md:text-xs px-3 py-2 md:px-4 md:py-3 rounded-3xl whitespace-nowrap hover:bg-blue-700 transition-all hover:scale-110 duration-300">Falar com um especialista</a></div><!-- Botão de menu (três linhas): abre e fecha a gaveta lateral pelo script.js. --><button
     type="button"
     aria-label="Abrir menu"
     class="flex flex-col transiction-all hover:scale-105 hover:cursor-pointer items-center justify-center gap-1.5 w-10 h-10 md:ml-2"><span
     class="block h-0.5 w-6 bg-black"></span><span
     class="block h-0.5 w-6 bg-black"></span><span
-    class="block h-0.5 w-6 bg-black"></span></button></nav><div
+    class="block h-0.5 w-6 bg-black"></span></button></nav><!-- Overlay escuro: aparece com o menu aberto e fecha o menu ao ser clicado. --><div
     aria-hidden="true"
-    class="fixed inset-0 z-30 bg-black/40 transition-opacity duration-300 opacity-0 pointer-events-none"></div><!-- Gaveta lateral original com links e chamada de contato. --><aside
+    class="fixed inset-0 z-30 bg-black/40 transition-opacity duration-300 opacity-0 pointer-events-none"></div><!-- Gaveta lateral (menu): links da página, troca de páginas e chamada de contato. --><aside
     aria-hidden="true"
     class="fixed top-0 right-0 z-40 h-full w-64 md:w-80 bg-white shadow-xl px-6 pt-24 pb-6 flex flex-col gap-6 font-bold text-[#55627a]  transition-transform duration-300 translate-x-full"><div
     class="flex flex-col text-lg gap-6 md:hidden"><a
@@ -58,7 +63,7 @@
     class="text-lg hover:text-[#222833]">Trabalhe conosco</a></div><a
     href="#contato"
     class="mt-auto bg-brand-muted text-white text-center px-4 py-3 rounded-3xl md:hidden">Falar com um especialista</a></aside></div><div
-    class="pt-20"><div><!-- Seção original do site, preservando sua estrutura e classes. --><section
+    class="pt-20"><div><!-- Hero: seção de abertura com imagem de fundo, título e botões. --><section
     id="inicio"
     class="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
     style="background-image:var(--asset-buildings-png)"><div
@@ -71,21 +76,22 @@
     class="font-family: [&#x27;inter&#x27;] mt-5 text-base md:text-lg text-white/80 leading-relaxed">Há mais de 15 anos conectando pessoas aos seus lares ideais. Somos especialistas em imóveis de alto padrão, unindo atendimento próximo, confiança e as melhores oportunidades do mercado imobiliário.</p><div
     class="pt-10 text-white  gap-6 flex"><button
     class="px-6 py-3 rounded-full hover:cursor-pointer bg-brand-muted border border-white/20 text-white font-semibold  hover:bg-brand-muted/70 transition-all duration-300">Ver oportunidades</button><button
-    class="px-6 py-3 rounded-full hover:cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold shadow-lg hover:bg-white/20 transition-all duration-300">Falar com um especialista</button></div></div></div></div></section><div
+    class="px-6 py-3 rounded-full hover:cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold shadow-lg hover:bg-white/20 transition-all duration-300">Falar com um especialista</button></div></div></div></div></section><!-- Imóveis em destaque: título, setas e carrossel de cards. --><div
     id="oportunidades"
     class="relative isolate w-full pt-12 md:pt-24 "><div
     class="flex flex-col md:flex-row items-center"><div
     class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><div
     class="w-85 mb-15 md:mr-15 flex flex-col items-center justify-center "><h2
-    class=" text-2xl md:text-4xl font-serif font-medium tracking-tight text-brand-dark text-center pb-2">Imóveis em <br/>destaque</h2><div
+    class=" text-2xl md:text-4xl font-serif font-medium tracking-tight text-brand-dark text-center pb-2">Imóveis em <br
+/>destaque</h2><div
     class="flex gap-2"><button
     class="w-7 md:w-10 h-7 md:h-10 border border-brand-dark rounded-md text-xs text-brand-dark hover:bg-surface-muted transition">←</button><button
     class="w-7 md:w-10 h-7 md:h-10 border border-brand-dark rounded-md text-xs text-brand-dark hover:bg-surface-muted transition">→</button></div></div><div
-    class="flex-1 overflow-hidden max-w-full"><div
-    class="flex gap-3 md:gap-5"><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+    class="flex-1 overflow-hidden max-w-full"><!-- Trilho do carrossel: um card por imóvel da lista de dados (prediosLista). --><div
+    class="flex gap-3 md:gap-5"><!-- Card do carrossel: foto, nome e informações que aparecem ao passar o mouse. --><div
+    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><img
     data-asset="predio-1.jpg"
-    alt="Foto do Boa Vista Towers"
+    alt="Foto do Residencial Jardim"
     class="
                     absolute
                     inset-0
@@ -109,15 +115,15 @@
                     px-5
                     py-5
                 "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Boa Vista Towers</h2><div
+    class="text-md font-bold md:text-xl text-ink mb-4">Residencial Jardim</h2><div
     class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
     class="flex flex-col gap-3"><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>2 ou 3 dorms</span></div><div
+    class="text-accent text-xl">🛏</span><span>Apartamento bonito e confortável</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>43 a 85 m²</span></div><div
+    class="text-accent text-xl">◎</span><span>45m²</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Alto da Boa Vista</span></div><button
+    class="text-accent text-xl">♧</span><span>São Paulo</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                         mt-2
                          w-25 
@@ -139,10 +145,10 @@
                             leading-none
                             text-sm
                             select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+                            ">→</span></button></div></div></div></div><!-- Card do carrossel: foto, nome e informações que aparecem ao passar o mouse. --><div
+    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><img
     data-asset="predio-1.jpg"
-    alt="Foto do Horizonte Moema"
+    alt="Foto do Edifício Central"
     class="
                     absolute
                     inset-0
@@ -166,15 +172,15 @@
                     px-5
                     py-5
                 "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Horizonte Moema</h2><div
+    class="text-md font-bold md:text-xl text-ink mb-4">Edifício Central</h2><div
     class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
     class="flex flex-col gap-3"><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>3 a 4 dorms (2 suítes)</span></div><div
+    class="text-accent text-xl">🛏</span><span>Apartamento moderno</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>120 a 240 m²</span></div><div
+    class="text-accent text-xl">◎</span><span>80m²</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Moema</span></div><button
+    class="text-accent text-xl">♧</span><span>Campinas</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                         mt-2
                          w-25 
@@ -196,10 +202,10 @@
                             leading-none
                             text-sm
                             select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+                            ">→</span></button></div></div></div></div><!-- Card do carrossel: foto, nome e informações que aparecem ao passar o mouse. --><div
+    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><img
     data-asset="predio-1.jpg"
-    alt="Foto do Vila Madalena"
+    alt="Foto do Residencial Jardim"
     class="
                     absolute
                     inset-0
@@ -223,15 +229,15 @@
                     px-5
                     py-5
                 "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Vila Madalena</h2><div
+    class="text-md font-bold md:text-xl text-ink mb-4">Residencial Jardim</h2><div
     class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
     class="flex flex-col gap-3"><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>Studio e 1 dorm</span></div><div
+    class="text-accent text-xl">🛏</span><span>Apartamento bonito e confortável</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>35 a 55 m²</span></div><div
+    class="text-accent text-xl">◎</span><span>70m²</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Vila Madalena</span></div><button
+    class="text-accent text-xl">♧</span><span>São Paulo</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                         mt-2
                          w-25 
@@ -253,10 +259,10 @@
                             leading-none
                             text-sm
                             select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+                            ">→</span></button></div></div></div></div><!-- Card do carrossel: foto, nome e informações que aparecem ao passar o mouse. --><div
+    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><img
     data-asset="predio-1.jpg"
-    alt="Foto do Jardins Prime"
+    alt="Foto do Edifício Central"
     class="
                     absolute
                     inset-0
@@ -280,15 +286,15 @@
                     px-5
                     py-5
                 "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Jardins Prime</h2><div
+    class="text-md font-bold md:text-xl text-ink mb-4">Edifício Central</h2><div
     class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
     class="flex flex-col gap-3"><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>4 dorms (4 suítes)</span></div><div
+    class="text-accent text-xl">🛏</span><span>Apartamento moderno</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>200 a 420 m²</span></div><div
+    class="text-accent text-xl">◎</span><span>80m²</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Jardim Paulista</span></div><button
+    class="text-accent text-xl">♧</span><span>Campinas</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                         mt-2
                          w-25 
@@ -310,10 +316,10 @@
                             leading-none
                             text-sm
                             select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+                            ">→</span></button></div></div></div></div><!-- Card do carrossel: foto, nome e informações que aparecem ao passar o mouse. --><div
+    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><img
     data-asset="predio-1.jpg"
-    alt="Foto do Pinheiros Design"
+    alt="Foto do Residencial Jardim"
     class="
                     absolute
                     inset-0
@@ -337,15 +343,15 @@
                     px-5
                     py-5
                 "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Pinheiros Design</h2><div
+    class="text-md font-bold md:text-xl text-ink mb-4">Residencial Jardim</h2><div
     class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
     class="flex flex-col gap-3"><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>1 a 3 dorms</span></div><div
+    class="text-accent text-xl">🛏</span><span>Apartamento bonito e confortável</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>50 a 110 m²</span></div><div
+    class="text-accent text-xl">◎</span><span>70m²</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Pinheiros</span></div><button
+    class="text-accent text-xl">♧</span><span>São Paulo</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                         mt-2
                          w-25 
@@ -367,10 +373,10 @@
                             leading-none
                             text-sm
                             select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+                            ">→</span></button></div></div></div></div><!-- Card do carrossel: foto, nome e informações que aparecem ao passar o mouse. --><div
+    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><img
     data-asset="predio-1.jpg"
-    alt="Foto do Urban Tatuapé"
+    alt="Foto do Edifício Central"
     class="
                     absolute
                     inset-0
@@ -394,15 +400,15 @@
                     px-5
                     py-5
                 "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Urban Tatuapé</h2><div
+    class="text-md font-bold md:text-xl text-ink mb-4">Edifício Central</h2><div
     class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
     class="flex flex-col gap-3"><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>2 dorms (1 suíte)</span></div><div
+    class="text-accent text-xl">🛏</span><span>Apartamento moderno</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>65 a 90 m²</span></div><div
+    class="text-accent text-xl">◎</span><span>120m²</span></div><div
     class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Tatuapé</span></div><button
+    class="text-accent text-xl">♧</span><span>Campinas</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                         mt-2
                          w-25 
@@ -425,121 +431,7 @@
                             text-sm
                             select-none
                             ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Terraço Ibirapuera"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Terraço Ibirapuera</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>3 dorms (1 a 3 suítes)</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>140 a 300 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Vila Mariana</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Oásis Brooklin"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Oásis Brooklin</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>1 ou 2 dorms</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>45 a 75 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Brooklin</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="w-1 md:w-1 shrink-0"></div></div></div></div></div><div
+    class="w-1 md:w-1 shrink-0"></div></div></div></div></div><!-- Sobre nós: quatro indicadores da imobiliária com imagens de fundo. --><div
     class="relative isolate w-full px-8 py-16"><hr
     class="border-brand-dark/70 py-5 border-t-3"
 /><div
@@ -547,45 +439,45 @@
     class="font-bold text-3xl pb-10">Sobre nós</h1></div><div
     class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><div
     class="grid grid-cols-2 md:grid-cols-4 justify-center gap-6"><div
-    class="w-full"><div
+    class="w-full"><!-- Card de indicador: imagem de fundo, número e descrição. --><div
     class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
     style="background-image:var(--asset-casa-card-1-jpg);background-position:center"><div
     class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
     class="absolute bottom-0 left-0 p-6 text-white"><p
     class="mt-1 text-md font-bold text-blue-200">Imoveis Vendidos:</p><p
     class="mt-1 text-3xl font-bold">345.123</p></div></div></div><div
-    class="w-full"><div
+    class="w-full"><!-- Card de indicador: imagem de fundo, número e descrição. --><div
     class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
     style="background-image:var(--asset-FamiliasAtendidas-jpg);background-position:center"><div
     class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
     class="absolute bottom-0 left-0 p-6 text-white"><p
     class="mt-1 text-md font-bold text-blue-200">Famílias Atendidas</p><p
     class="mt-1 text-3xl font-bold">496.589</p></div></div></div><div
-    class="w-full"><div
+    class="w-full"><!-- Card de indicador: imagem de fundo, número e descrição. --><div
     class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
     style="background-image:var(--asset-ImobiFacens-jpg);background-position:center"><div
     class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
     class="absolute bottom-0 left-0 p-6 text-white"><p
     class="mt-1 text-md font-bold text-blue-200">Anos de Mercado:</p><p
     class="mt-1 text-3xl font-bold">15</p></div></div></div><div
-    class="w-full"><div
+    class="w-full"><!-- Card de indicador: imagem de fundo, número e descrição. --><div
     class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
     style="background-image:var(--asset-corretor-png);background-position:center"><div
     class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
     class="absolute bottom-0 left-0 p-6 text-white"><p
     class="mt-1 text-md font-bold text-blue-200">Corretores Especialistas:</p><p
-    class="mt-1 text-3xl font-bold">25</p></div></div></div></div></div><div
+    class="mt-1 text-3xl font-bold">25</p></div></div></div></div></div><!-- Contato: canais de e-mail e telefone. --><div
     id="contato"
     class="relative isolate w-full px-8 py-16"><hr
     class="border-brand-dark/70 py-5 border-t-3"
 /><div
-    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><!-- Seção original do site, preservando sua estrutura e classes. --><section
+    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><!-- Canais de contato: e-mail e telefone em cards lado a lado. --><section
     class="w-full max-w-4xl mx-auto text-brand-dark"><div
     class="text-center mb-10"><h1
     class="text-3xl md:text-4xl font-bold mb-2">Entre em contato conosco!</h1><p
     class="text-base text-gray-600">Escolha um dos canais abaixo para falar com nossa equipe.</p></div><div
     class="flex flex-col md:flex-row justify-center items-stretch gap-6"><div
-    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><!-- Ícone vetorial original, mantendo os caminhos e dimensões. --><svg
+    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><svg
     class="w-8 h-8 mb-4 text-brand-dark"
     fill="none"
     stroke="currentColor"
@@ -598,7 +490,7 @@
     class="text-lg font-semibold mb-2">E-mail</h2><a
     href="mailto:imobifaces@gmail.com"
     class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">imobifaces@gmail.com</a></div><div
-    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><!-- Ícone vetorial original, mantendo os caminhos e dimensões. --><svg
+    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><svg
     class="w-8 h-8 mb-4 text-brand-dark"
     fill="none"
     stroke="currentColor"
@@ -610,7 +502,7 @@
     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg><h2
     class="text-lg font-semibold mb-2">Telefone / Outro</h2><a
     href="#"
-    class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">(11) 99999-9999</a></div></div></section></div><!-- Rodapé original com apresentação, créditos e direitos autorais. --><footer
+    class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">(11) 99999-9999</a></div></div></section></div><!-- Rodapé: apresentação, equipe que desenvolveu e direitos autorais. --><footer
     class="bg-brand-dark w-full text-brand-light py-4 px-4"><div
     class="max-w-6xl mx-auto"><div
     class="md:flex w-full"><div
@@ -626,578 +518,9 @@
     class="md:flex w-full justify-between mt-5 text-brand-muted"><p
     class="text-xs items-start">© 2026 Imobiliária. Todos os direitos reservados.</p><p
     class="text-xs items-end mt-2 md:mt-0 ">Design &amp; Performance</p></div></div></footer></div></div></div></div>
-<!-- Templates inertes conservam as outras páginas sem alterar o layout inicial. -->
-<!-- InitialPage: conteúdo inicial reutilizado ao trocar de página. -->
-<template id="template-home"><div><!-- Seção original do site, preservando sua estrutura e classes. --><section
-    id="inicio"
-    class="relative min-h-screen w-full bg-cover bg-center bg-no-repeat"
-    style="background-image:var(--asset-buildings-png)"><div
-    class="absolute inset-0 bg-linear-to-r from-brand-full-dark via-brand-full-dark/60 to-brand-full-dark/25"><div
-    class="flex h-screen pl-20 items-center justify-left px-6"><div
-    class="max-w-2xl text-left"><h1
-    class="font-family: [&#x27;inter&#x27;] text-6xl md:text-8xl font-medium tracking-tight"><span
-    class="text-white">Imobi</span><span
-    class="text-blue-400">Faces</span></h1><p
-    class="font-family: [&#x27;inter&#x27;] mt-5 text-base md:text-lg text-white/80 leading-relaxed">Há mais de 15 anos conectando pessoas aos seus lares ideais. Somos especialistas em imóveis de alto padrão, unindo atendimento próximo, confiança e as melhores oportunidades do mercado imobiliário.</p><div
-    class="pt-10 text-white  gap-6 flex"><button
-    class="px-6 py-3 rounded-full hover:cursor-pointer bg-brand-muted border border-white/20 text-white font-semibold  hover:bg-brand-muted/70 transition-all duration-300">Ver oportunidades</button><button
-    class="px-6 py-3 rounded-full hover:cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold shadow-lg hover:bg-white/20 transition-all duration-300">Falar com um especialista</button></div></div></div></div></section><div
-    id="oportunidades"
-    class="relative isolate w-full pt-12 md:pt-24 "><div
-    class="flex flex-col md:flex-row items-center"><div
-    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><div
-    class="w-85 mb-15 md:mr-15 flex flex-col items-center justify-center "><h2
-    class=" text-2xl md:text-4xl font-serif font-medium tracking-tight text-brand-dark text-center pb-2">Imóveis em <br/>destaque</h2><div
-    class="flex gap-2"><button
-    class="w-7 md:w-10 h-7 md:h-10 border border-brand-dark rounded-md text-xs text-brand-dark hover:bg-surface-muted transition">←</button><button
-    class="w-7 md:w-10 h-7 md:h-10 border border-brand-dark rounded-md text-xs text-brand-dark hover:bg-surface-muted transition">→</button></div></div><div
-    class="flex-1 overflow-hidden max-w-full"><div
-    class="flex gap-3 md:gap-5"><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Boa Vista Towers"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Boa Vista Towers</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>2 ou 3 dorms</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>43 a 85 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Alto da Boa Vista</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Horizonte Moema"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Horizonte Moema</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>3 a 4 dorms (2 suítes)</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>120 a 240 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Moema</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Vila Madalena"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Vila Madalena</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>Studio e 1 dorm</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>35 a 55 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Vila Madalena</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Jardins Prime"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Jardins Prime</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>4 dorms (4 suítes)</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>200 a 420 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Jardim Paulista</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Pinheiros Design"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Pinheiros Design</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>1 a 3 dorms</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>50 a 110 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Pinheiros</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Urban Tatuapé"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Urban Tatuapé</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>2 dorms (1 suíte)</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>65 a 90 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Tatuapé</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Terraço Ibirapuera"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Terraço Ibirapuera</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>3 dorms (1 a 3 suítes)</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>140 a 300 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Vila Mariana</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="relative h-55 md:h-80 w-42 md:w-85 shrink-0 group m-1"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="predio-1.jpg"
-    alt="Foto do Oásis Brooklin"
-    class="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    rounded-tr-[50px]
-                "
-/><div
-    class="
-                    absolute
-                    left-0
-                    bottom-0
-                    rounded-tr-4xl
-                    w-full md:w-55
-                    h-13 md:h-18.75
-                    group-hover:h-60
-                    transition-all
-                    duration-500
-                    opacity-80 md:opacity-90 bg-gray-300  md:bg-surface
-                    px-5
-                    py-5
-                "><h2
-    class="text-md font-bold md:text-xl text-ink mb-4">Oásis Brooklin</h2><div
-    class="opacity-0 transition-opacity duration-500 group-hover:opacity-100"><div
-    class="flex flex-col gap-3"><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">🛏</span><span>1 ou 2 dorms</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">◎</span><span>45 a 75 m²</span></div><div
-    class="flex items-center gap-2 text-sm text-black"><span
-    class="text-accent text-xl">♧</span><span>Brooklin</span></div><button
-    class="
-                        mt-2
-                         w-25 
-                         h-8.5 
-                         bg-accent 
-                         rounded-md 
-                         text-xs 
-                         text-on-accent 
-                         hover:bg-accent-hover 
-                         transition 
-                         flex 
-                         items-center 
-                         justify-center 
-                         font-bold 
-                         gap-1.5"><span>Conheça</span><span
-    class="
-                            inline-flex
-                            items-center
-                            leading-none
-                            text-sm
-                            select-none
-                            ">→</span></button></div></div></div></div><div
-    class="w-1 md:w-1 shrink-0"></div></div></div></div></div><div
-    class="relative isolate w-full px-8 py-16"><hr
-    class="border-brand-dark/70 py-5 border-t-3"
-/><div
-    class="content-center text-center justify-center mx-auto"><h1
-    class="font-bold text-3xl pb-10">Sobre nós</h1></div><div
-    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><div
-    class="grid grid-cols-2 md:grid-cols-4 justify-center gap-6"><div
-    class="w-full"><div
-    class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
-    style="background-image:var(--asset-casa-card-1-jpg);background-position:center"><div
-    class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
-    class="absolute bottom-0 left-0 p-6 text-white"><p
-    class="mt-1 text-md font-bold text-blue-200">Imoveis Vendidos:</p><p
-    class="mt-1 text-3xl font-bold">345.123</p></div></div></div><div
-    class="w-full"><div
-    class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
-    style="background-image:var(--asset-FamiliasAtendidas-jpg);background-position:center"><div
-    class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
-    class="absolute bottom-0 left-0 p-6 text-white"><p
-    class="mt-1 text-md font-bold text-blue-200">Famílias Atendidas</p><p
-    class="mt-1 text-3xl font-bold">496.589</p></div></div></div><div
-    class="w-full"><div
-    class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
-    style="background-image:var(--asset-ImobiFacens-jpg);background-position:center"><div
-    class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
-    class="absolute bottom-0 left-0 p-6 text-white"><p
-    class="mt-1 text-md font-bold text-blue-200">Anos de Mercado:</p><p
-    class="mt-1 text-3xl font-bold">15</p></div></div></div><div
-    class="w-full"><div
-    class="relative w-full hover:scale-110 transition-all duration-600 w-max-80 h-48 overflow-hidden rounded-xl bg-cover bg-center shadow-lg"
-    style="background-image:var(--asset-corretor-png);background-position:center"><div
-    class="absolute inset-0 bg-linear-to-tr from-blue-950 via-blue-950/70 to-transparent"></div><div
-    class="absolute bottom-0 left-0 p-6 text-white"><p
-    class="mt-1 text-md font-bold text-blue-200">Corretores Especialistas:</p><p
-    class="mt-1 text-3xl font-bold">25</p></div></div></div></div></div><div
-    id="contato"
-    class="relative isolate w-full px-8 py-16"><hr
-    class="border-brand-dark/70 py-5 border-t-3"
-/><div
-    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><!-- Seção original do site, preservando sua estrutura e classes. --><section
-    class="w-full max-w-4xl mx-auto text-brand-dark"><div
-    class="text-center mb-10"><h1
-    class="text-3xl md:text-4xl font-bold mb-2">Entre em contato conosco!</h1><p
-    class="text-base text-gray-600">Escolha um dos canais abaixo para falar com nossa equipe.</p></div><div
-    class="flex flex-col md:flex-row justify-center items-stretch gap-6"><div
-    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><!-- Ícone vetorial original, mantendo os caminhos e dimensões. --><svg
-    class="w-8 h-8 mb-4 text-brand-dark"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"><path
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><h2
-    class="text-lg font-semibold mb-2">E-mail</h2><a
-    href="mailto:imobifaces@gmail.com"
-    class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">imobifaces@gmail.com</a></div><div
-    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><!-- Ícone vetorial original, mantendo os caminhos e dimensões. --><svg
-    class="w-8 h-8 mb-4 text-brand-dark"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"><path
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg><h2
-    class="text-lg font-semibold mb-2">Telefone / Outro</h2><a
-    href="#"
-    class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">(11) 99999-9999</a></div></div></section></div><!-- Rodapé original com apresentação, créditos e direitos autorais. --><footer
-    class="bg-brand-dark w-full text-brand-light py-4 px-4"><div
-    class="max-w-6xl mx-auto"><div
-    class="md:flex w-full"><div
-    class="flex-1"><a
-    href="#inicio"
-    class="font-black text-on-brand text-2xl">Imobiliária</a><p
-    class="text-xs text-brand">Encontre o imóvel ideal com seguraça e agilidade</p></div><div
-    class="flex-1 mt-5 md:mt-3 text-brand-light flex flex-col md:items-end mb-5"><div><h1
-    class="font-bold  text-brand text-sm">DESENVOLVIDO POR</h1><div
-    class="grid grid-cols-2 md:gap-x-5 max-w-xs text-xs"><h2>Mateus Sonnenberg</h2><h2>Pedro Wagner</h2><h2>Rodrigo Boava</h2><h2>Jhonny Walter</h2></div></div></div></div><hr
-    class="border-brand-border"
-/><div
-    class="md:flex w-full justify-between mt-5 text-brand-muted"><p
-    class="text-xs items-start">© 2026 Imobiliária. Todos os direitos reservados.</p><p
-    class="text-xs items-end mt-2 md:mt-0 ">Design &amp; Performance</p></div></div></footer></div></template>
-<!-- AptoPage: filtros, lista, contato e rodapé originais. -->
-<template id="template-catalog"><div><div
+<!-- Templates: conteúdo inerte das outras páginas, copiado pelo script.js quando a página é aberta. -->
+<!-- AptoPage (Todos os apartamentos): filtros, lista de imóveis, contato e rodapé. -->
+<template id="template-catalog"><div><!-- Barra de filtros: busca por nome, metragem e faixa de preço. --><div
     class="bg-indigo-900 p-5 flex flex-col md:flex-row text-white justify-around"><div
     class="w-full md:w-1/4 flex items-center mb-2 md:mb-0"><input
     type="text"
@@ -1207,7 +530,7 @@
     class="flex gap-3 md:contents"><div
     class="flex-col items-center gap-2"><label
     for=""
-    class="m-2 font-bold">Metragem:</label><!-- Filtro original: as opções alimentam a comparação em JavaScript. --><select
+    class="m-2 font-bold">Metragem:</label><!-- Filtro: o valor escolhido é comparado com os dados no script.js. --><select
     id="filter-type"
     class="border-2 border-gray-200 rounded-lg text-sm p-1"><option
     class="text-black text-sm"
@@ -1220,7 +543,7 @@
     value="&gt;100">Acima de 100m²</option></select></div><div
     class="flex-col items-center gap-2"><label
     for=""
-    class="m-2 font-bold">Preço:</label><!-- Filtro original: as opções alimentam a comparação em JavaScript. --><select
+    class="m-2 font-bold">Preço:</label><!-- Filtro: o valor escolhido é comparado com os dados no script.js. --><select
     id="filter-price"
     class="border-2 border-gray-200 rounded-lg text-sm p-1"><option
     class="text-black text-sm"
@@ -1230,7 +553,7 @@
     class="text-black text-sm"
     value="500000-1000000">R$500.000 - 1.000.000</option><option
     class="text-black text-sm"
-    value="&gt;1000000">Acima de R$ 1.000.000</option></select></div></div></div><div><!-- Seção original do site, preservando sua estrutura e classes. --><section
+    value="&gt;1000000">Acima de R$ 1.000.000</option></select></div></div></div><div><!-- Lista de imóveis (AptoList): título, contador e grade de cards. --><section
     id="oportunidades"
     class="relative isolate w-full pt-10 md:pt-16 pb-16"><div
     class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><div
@@ -1239,11 +562,11 @@
     class="text-2xl md:text-3xl font-bold text-ink">Todos os Imóveis</h2><p
     class="text-sm text-ink/70"
     aria-live="polite">6 imóveis</p></header><div
-    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5"><!-- Card do catálogo original com imagem, informações e estado de foco. --><article
+    class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5"><!-- Card do catálogo: foto, nome, detalhes e botão Conheça (focável pelo teclado). --><article
     tabindex="0"
     class="relative w-full aspect-4/5 group overflow-hidden rounded-2xl shadow-md hover:shadow-xl 
             focus-visible:shadow-xl focus-visible:outline-2 focus-visible:outline-accent
-            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><img
     data-asset="predio-1.jpg"
     alt="Foto do Residencial Jardim"
     loading="lazy"
@@ -1278,7 +601,7 @@
     aria-hidden="true">◎</span><span>45m²</span></div><div
     class="flex items-center gap-2 text-xs md:text-sm text-black"><span
     class="text-accent text-lg"
-    aria-hidden="true">♧</span><span>São Paulo</span></div><button
+    aria-hidden="true">♧</span><span>São Paulo</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                                 mt-1
                                 w-25
@@ -1302,11 +625,11 @@
                                     text-sm
                                     select-none
                                 "
-    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo original com imagem, informações e estado de foco. --><article
+    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo: foto, nome, detalhes e botão Conheça (focável pelo teclado). --><article
     tabindex="0"
     class="relative w-full aspect-4/5 group overflow-hidden rounded-2xl shadow-md hover:shadow-xl 
             focus-visible:shadow-xl focus-visible:outline-2 focus-visible:outline-accent
-            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><img
     data-asset="predio-1.jpg"
     alt="Foto do Edifício Central"
     loading="lazy"
@@ -1341,7 +664,7 @@
     aria-hidden="true">◎</span><span>80m²</span></div><div
     class="flex items-center gap-2 text-xs md:text-sm text-black"><span
     class="text-accent text-lg"
-    aria-hidden="true">♧</span><span>Campinas</span></div><button
+    aria-hidden="true">♧</span><span>Campinas</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                                 mt-1
                                 w-25
@@ -1365,11 +688,11 @@
                                     text-sm
                                     select-none
                                 "
-    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo original com imagem, informações e estado de foco. --><article
+    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo: foto, nome, detalhes e botão Conheça (focável pelo teclado). --><article
     tabindex="0"
     class="relative w-full aspect-4/5 group overflow-hidden rounded-2xl shadow-md hover:shadow-xl 
             focus-visible:shadow-xl focus-visible:outline-2 focus-visible:outline-accent
-            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><img
     data-asset="predio-1.jpg"
     alt="Foto do Residencial Jardim"
     loading="lazy"
@@ -1404,7 +727,7 @@
     aria-hidden="true">◎</span><span>70m²</span></div><div
     class="flex items-center gap-2 text-xs md:text-sm text-black"><span
     class="text-accent text-lg"
-    aria-hidden="true">♧</span><span>São Paulo</span></div><button
+    aria-hidden="true">♧</span><span>São Paulo</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                                 mt-1
                                 w-25
@@ -1428,11 +751,11 @@
                                     text-sm
                                     select-none
                                 "
-    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo original com imagem, informações e estado de foco. --><article
+    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo: foto, nome, detalhes e botão Conheça (focável pelo teclado). --><article
     tabindex="0"
     class="relative w-full aspect-4/5 group overflow-hidden rounded-2xl shadow-md hover:shadow-xl 
             focus-visible:shadow-xl focus-visible:outline-2 focus-visible:outline-accent
-            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><img
     data-asset="predio-1.jpg"
     alt="Foto do Edifício Central"
     loading="lazy"
@@ -1467,7 +790,7 @@
     aria-hidden="true">◎</span><span>80m²</span></div><div
     class="flex items-center gap-2 text-xs md:text-sm text-black"><span
     class="text-accent text-lg"
-    aria-hidden="true">♧</span><span>Campinas</span></div><button
+    aria-hidden="true">♧</span><span>Campinas</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                                 mt-1
                                 w-25
@@ -1491,11 +814,11 @@
                                     text-sm
                                     select-none
                                 "
-    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo original com imagem, informações e estado de foco. --><article
+    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo: foto, nome, detalhes e botão Conheça (focável pelo teclado). --><article
     tabindex="0"
     class="relative w-full aspect-4/5 group overflow-hidden rounded-2xl shadow-md hover:shadow-xl 
             focus-visible:shadow-xl focus-visible:outline-2 focus-visible:outline-accent
-            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><img
     data-asset="predio-1.jpg"
     alt="Foto do Residencial Jardim"
     loading="lazy"
@@ -1530,7 +853,7 @@
     aria-hidden="true">◎</span><span>70m²</span></div><div
     class="flex items-center gap-2 text-xs md:text-sm text-black"><span
     class="text-accent text-lg"
-    aria-hidden="true">♧</span><span>São Paulo</span></div><button
+    aria-hidden="true">♧</span><span>São Paulo</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                                 mt-1
                                 w-25
@@ -1554,11 +877,11 @@
                                     text-sm
                                     select-none
                                 "
-    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo original com imagem, informações e estado de foco. --><article
+    aria-hidden="true">→</span></button></div></div></div></article><!-- Card do catálogo: foto, nome, detalhes e botão Conheça (focável pelo teclado). --><article
     tabindex="0"
     class="relative w-full aspect-4/5 group overflow-hidden rounded-2xl shadow-md hover:shadow-xl 
             focus-visible:shadow-xl focus-visible:outline-2 focus-visible:outline-accent
-            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
+            starting:opacity-0 starting:translate-y-4 transition duration-500 ease-out motion-reduce:transition-none"><img
     data-asset="predio-1.jpg"
     alt="Foto do Edifício Central"
     loading="lazy"
@@ -1593,7 +916,7 @@
     aria-hidden="true">◎</span><span>120m²</span></div><div
     class="flex items-center gap-2 text-xs md:text-sm text-black"><span
     class="text-accent text-lg"
-    aria-hidden="true">♧</span><span>Campinas</span></div><button
+    aria-hidden="true">♧</span><span>Campinas</span></div><!-- Botão Conheça: abre a página de detalhes deste imóvel (script.js). --><button
     class="
                                 mt-1
                                 w-25
@@ -1617,18 +940,18 @@
                                     text-sm
                                     select-none
                                 "
-    aria-hidden="true">→</span></button></div></div></div></article></div></div></section></div><div
+    aria-hidden="true">→</span></button></div></div></div></article></div></div></section></div><!-- Contato: canais de e-mail e telefone. --><div
     id="contato"
     class="relative isolate w-full px-8 py-16"><hr
     class="border-brand-dark/70 py-5 border-t-3"
 /><div
-    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><!-- Seção original do site, preservando sua estrutura e classes. --><section
+    class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><!-- Canais de contato: e-mail e telefone em cards lado a lado. --><section
     class="w-full max-w-4xl mx-auto text-brand-dark"><div
     class="text-center mb-10"><h1
     class="text-3xl md:text-4xl font-bold mb-2">Entre em contato conosco!</h1><p
     class="text-base text-gray-600">Escolha um dos canais abaixo para falar com nossa equipe.</p></div><div
     class="flex flex-col md:flex-row justify-center items-stretch gap-6"><div
-    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><!-- Ícone vetorial original, mantendo os caminhos e dimensões. --><svg
+    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><svg
     class="w-8 h-8 mb-4 text-brand-dark"
     fill="none"
     stroke="currentColor"
@@ -1641,7 +964,7 @@
     class="text-lg font-semibold mb-2">E-mail</h2><a
     href="mailto:imobifaces@gmail.com"
     class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">imobifaces@gmail.com</a></div><div
-    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><!-- Ícone vetorial original, mantendo os caminhos e dimensões. --><svg
+    class="flex-1 flex flex-col items-center p-8 bg-white/70 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"><svg
     class="w-8 h-8 mb-4 text-brand-dark"
     fill="none"
     stroke="currentColor"
@@ -1653,7 +976,7 @@
     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg><h2
     class="text-lg font-semibold mb-2">Telefone / Outro</h2><a
     href="#"
-    class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">(11) 99999-9999</a></div></div></section></div><!-- Rodapé original com apresentação, créditos e direitos autorais. --><footer
+    class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">(11) 99999-9999</a></div></div></section></div><!-- Rodapé: apresentação, equipe que desenvolveu e direitos autorais. --><footer
     class="bg-brand-dark w-full text-brand-light py-4 px-4"><div
     class="max-w-6xl mx-auto"><div
     class="md:flex w-full"><div
@@ -1669,54 +992,8 @@
     class="md:flex w-full justify-between mt-5 text-brand-muted"><p
     class="text-xs items-start">© 2026 Imobiliária. Todos os direitos reservados.</p><p
     class="text-xs items-end mt-2 md:mt-0 ">Design &amp; Performance</p></div></div></footer></div></template>
-<!-- ImovelPage: galeria original, sem inventar acesso nos cards. -->
-<template id="template-detail"><div><div
-    class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5 md:h-120"><button
-    class="group relative h-64 md:h-full w-full overflow-hidden rounded-lg text-white"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="casa-card-1.jpg"
-    alt="Main Picture"
-    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-/></button><div
-    class="grid grid-cols-2 grid-rows-2 gap-2 h-64 md:h-full"><button
-    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="casa-card-1.jpg"
-    alt="Picture 1"
-    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-/></button><button
-    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="casa-card-1.jpg"
-    alt="Picture 2"
-    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-/></button><button
-    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="casa-card-1.jpg"
-    alt="Picture 3"
-    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-/></button><button
-    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><!-- Imagem original associada ao arquivo indicado por data-asset. --><img
-    data-asset="casa-card-1.jpg"
-    alt="Picture 4"
-    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-/><span
-    class="pointer-events-none absolute inset-0 bg-linear-to-t from-indigo-950/80 via-indigo-950/15 to-transparent"></span><span
-    class="absolute inset-x-0 bottom-0 text-right text-lg p-3">Ver mais fotos</span></button></div></div><!-- Rodapé original com apresentação, créditos e direitos autorais. --><footer
-    class="bg-brand-dark w-full text-brand-light py-4 px-4"><div
-    class="max-w-6xl mx-auto"><div
-    class="md:flex w-full"><div
-    class="flex-1"><a
-    href="#inicio"
-    class="font-black text-on-brand text-2xl">Imobiliária</a><p
-    class="text-xs text-brand">Encontre o imóvel ideal com seguraça e agilidade</p></div><div
-    class="flex-1 mt-5 md:mt-3 text-brand-light flex flex-col md:items-end mb-5"><div><h1
-    class="font-bold  text-brand text-sm">DESENVOLVIDO POR</h1><div
-    class="grid grid-cols-2 md:gap-x-5 max-w-xs text-xs"><h2>Mateus Sonnenberg</h2><h2>Pedro Wagner</h2><h2>Rodrigo Boava</h2><h2>Jhonny Walter</h2></div></div></div></div><hr
-    class="border-brand-border"
-/><div
-    class="md:flex w-full justify-between mt-5 text-brand-muted"><p
-    class="text-xs items-start">© 2026 Imobiliária. Todos os direitos reservados.</p><p
-    class="text-xs items-end mt-2 md:mt-0 ">Design &amp; Performance</p></div></div></footer></div></template>
-<!-- AptoList: mensagem original quando nenhum imóvel corresponde. -->
-<template id="template-list"><!-- Seção original do site, preservando sua estrutura e classes. --><section
+<!-- AptoList sem resultados: a mensagem de estado vazio é copiada deste template. -->
+<template id="template-list"><!-- Lista de imóveis (AptoList): título, contador e grade de cards. --><section
     id="oportunidades"
     class="relative isolate w-full pt-10 md:pt-16 pb-16"><div
     class="absolute inset-0 -z-10 pointer-events-none bg-linear-to-r from-blue-50 via-transparent to-transparent"></div><div
@@ -1724,9 +1001,57 @@
     class="flex flex-wrap items-baseline justify-between gap-2 mb-6 md:mb-8"><h2
     class="text-2xl md:text-3xl font-bold text-ink">Todos os Imóveis</h2><p
     class="text-sm text-ink/70"
-    aria-live="polite">0 imóveis</p></header><div
+    aria-live="polite">0 imóveis</p></header><!-- Estado vazio: mostrado quando nenhum imóvel corresponde aos filtros. --><div
     class="py-20 text-center"><p
     class="text-lg font-bold text-ink">Nenhum imóvel encontrado</p><p
     class="mt-1 text-sm text-ink/70">Tente mudar a busca, a metragem ou o preço.</p></div></div></section></template>
+<!-- ImovelPage: página de detalhes; o script.js preenche os campos marcados com data-field. -->
+<template id="template-detail"><div><!-- Galeria de fotos: foto principal e quatro miniaturas (cada uma mostra o alerta Ver mais fotos). --><div
+    class="grid grid-cols-1 md:grid-cols-2 gap-2 p-5 md:h-120"><h1
+    class="col-span-1 md:col-span-2 text-2xl font-bold mb-4"
+    data-field="name"></h1><button
+    class="group relative h-64 md:h-full w-full overflow-hidden rounded-lg text-white"><img
+    data-asset="predio-1.jpg"
+    alt="Main Picture"
+    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+/></button><div
+    class="grid grid-cols-2 grid-rows-2 gap-2 h-64 md:h-full"><button
+    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><img
+    data-asset="predio-1.jpg"
+    alt="Picture 1"
+    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+/></button><button
+    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><img
+    data-asset="predio-1.jpg"
+    alt="Picture 2"
+    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+/></button><button
+    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><img
+    data-asset="predio-1.jpg"
+    alt="Picture 3"
+    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+/></button><button
+    class="group relative h-full w-full overflow-hidden rounded-lg text-white"><img
+    data-asset="predio-1.jpg"
+    alt="Picture 4"
+    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+/><span
+    class="pointer-events-none absolute inset-0 bg-linear-to-t from-indigo-950/80 via-indigo-950/15 to-transparent"></span><span
+    class="absolute inset-x-0 bottom-0 text-right text-lg p-3">Ver mais fotos</span></button></div></div><!-- Rodapé: apresentação, equipe que desenvolveu e direitos autorais. --><footer
+    class="bg-brand-dark w-full text-brand-light py-4 px-4"><div
+    class="max-w-6xl mx-auto"><div
+    class="md:flex w-full"><div
+    class="flex-1"><a
+    href="#inicio"
+    class="font-black text-on-brand text-2xl">Imobiliária</a><p
+    class="text-xs text-brand">Encontre o imóvel ideal com seguraça e agilidade</p></div><div
+    class="flex-1 mt-5 md:mt-3 text-brand-light flex flex-col md:items-end mb-5"><div><h1
+    class="font-bold  text-brand text-sm">DESENVOLVIDO POR</h1><div
+    class="grid grid-cols-2 md:gap-x-5 max-w-xs text-xs"><h2>Mateus Sonnenberg</h2><h2>Pedro Wagner</h2><h2>Rodrigo Boava</h2><h2>Jhonny Walter</h2></div></div></div></div><hr
+    class="border-brand-border"
+/><div
+    class="md:flex w-full justify-between mt-5 text-brand-muted"><p
+    class="text-xs items-start">© 2026 Imobiliária. Todos os direitos reservados.</p><p
+    class="text-xs items-end mt-2 md:mt-0 ">Design &amp; Performance</p></div></div></footer></div></template>
 </body>
 </html>

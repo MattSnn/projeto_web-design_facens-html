@@ -1,73 +1,122 @@
 "use strict";
-/* Referências às imagens originais, sem compressão ou redimensionamento.
-   As URLs apontam para o commit original e dispensam uma pasta de assets. */
+/* script.js — comportamento do ImobiFaces sem framework.
+   Traduz para JavaScript puro os estados (useState), efeitos (useEffect) e eventos
+   dos componentes React do projeto original. O HTML fica em index.html e o CSS em style.css. */
+
+/* ============================================================
+   1. IMAGENS
+   ============================================================ */
+
+/* Endereço das imagens originais no GitHub, fixado no commit convertido.
+   Assim a versão HTML não precisa de uma pasta de imagens própria. */
+const ASSET_BASE = "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/5cbcdd9e0c5e0e60bf88fd38de001ecd30092061/";
+
+/* Nome do arquivo usado no HTML (data-asset ou var(--asset-...)) -> URL da imagem original. */
 const originalAssets = {
-    "predio-1.jpg": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/src/components/assets/predio-1.jpg",
-    "buildings.png": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/src/components/assets/buildings.png",
-    "casa-card-1.jpg": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/src/components/assets/casa-card-1.jpg",
-    "FamiliasAtendidas.jpg": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/src/components/assets/FamiliasAtendidas.jpg",
-    "ImobiFacens.jpg": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/src/components/assets/ImobiFacens.jpg",
-    "corretor.png": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/src/components/assets/corretor.png",
-    "favicon.svg": "https://raw.githubusercontent.com/MattSnn/projeto_web-design_facens/304fcf025c77bcca0e588eb71322d947de499bfa/public/favicon.svg"
+    "predio-1.jpg": ASSET_BASE + "src/components/assets/predio-1.jpg",
+    "buildings.png": ASSET_BASE + "src/components/assets/buildings.png",
+    "casa-card-1.jpg": ASSET_BASE + "src/components/assets/casa-card-1.jpg",
+    "FamiliasAtendidas.jpg": ASSET_BASE + "src/components/assets/FamiliasAtendidas.jpg",
+    "ImobiFacens.jpg": ASSET_BASE + "src/components/assets/ImobiFacens.jpg",
+    "corretor.png": ASSET_BASE + "src/components/assets/corretor.png",
+    "favicon.svg": ASSET_BASE + "public/favicon.svg"
 };
-/* Dados originais usados nos mesmos limites de filtragem de AptoPage.tsx. */
-const properties = [
+
+/* ============================================================
+   2. DADOS DOS IMÓVEIS
+   ============================================================ */
+
+/* Cópia fiel de src/data/prediosLista.ts do original.
+   - price: valor usado no filtro de preço; area: usada no filtro de metragem;
+   - mainImg/images: nome do arquivo de imagem (ver originalAssets). */
+const prediosLista = [
     {
-        "name": "Residencial Jardim",
-        "img": "/src/components/assets/predio-1.jpg",
-        "info": "Apartamento bonito e confortável",
-        "area": "45m²",
-        "location": "São Paulo",
-        "price": 325000
+        id: 0,
+        name: "Residencial Jardim",
+        mainImg: "predio-1.jpg",
+        info: "Apartamento bonito e confortável",
+        area: "45m²",
+        location: "São Paulo",
+        price: 325000,
+        images: ["predio-1.jpg"],
+        planta: "Planta de 45m²",
+        description: "Apartamento confortável em uma localização tranquila."
     },
     {
-        "name": "Edifício Central",
-        "img": "/src/components/assets/predio-1.jpg",
-        "info": "Apartamento moderno",
-        "area": "80m²",
-        "location": "Campinas",
-        "price": 690000
+        id: 1,
+        name: "Edifício Central",
+        mainImg: "predio-1.jpg",
+        info: "Apartamento moderno",
+        area: "80m²",
+        location: "Campinas",
+        price: 690000,
+        images: ["predio-1.jpg"],
+        planta: "Planta de 80m²",
+        description: "Apartamento moderno próximo aos principais serviços."
     },
     {
-        "name": "Residencial Jardim",
-        "img": "/src/components/assets/predio-1.jpg",
-        "info": "Apartamento bonito e confortável",
-        "area": "70m²",
-        "location": "São Paulo",
-        "price": 540000
+        id: 2,
+        name: "Residencial Jardim",
+        mainImg: "predio-1.jpg",
+        info: "Apartamento bonito e confortável",
+        area: "70m²",
+        location: "São Paulo",
+        price: 540000,
+        images: ["predio-1.jpg"],
+        planta: "Planta de 70m²",
+        description: "Apartamento espaçoso em uma localização tranquila."
     },
     {
-        "name": "Edifício Central",
-        "img": "/src/components/assets/predio-1.jpg",
-        "info": "Apartamento moderno",
-        "area": "80m²",
-        "location": "Campinas",
-        "price": 835000
+        id: 3,
+        name: "Edifício Central",
+        mainImg: "predio-1.jpg",
+        info: "Apartamento moderno",
+        area: "80m²",
+        location: "Campinas",
+        price: 835000,
+        images: ["predio-1.jpg"],
+        planta: "Planta de 80m²",
+        description: "Apartamento moderno com ambientes bem distribuídos."
     },
     {
-        "name": "Residencial Jardim",
-        "img": "/src/components/assets/predio-1.jpg",
-        "info": "Apartamento bonito e confortável",
-        "area": "70m²",
-        "location": "São Paulo",
-        "price": 610000
+        id: 4,
+        name: "Residencial Jardim",
+        mainImg: "predio-1.jpg",
+        info: "Apartamento bonito e confortável",
+        area: "70m²",
+        location: "São Paulo",
+        price: 610000,
+        images: ["predio-1.jpg"],
+        planta: "Planta de 70m²",
+        description: "Apartamento amplo, ideal para famílias."
     },
     {
-        "name": "Edifício Central",
-        "img": "/src/components/assets/predio-1.jpg",
-        "info": "Apartamento moderno",
-        "area": "120m²",
-        "location": "Campinas",
-        "price": 1250000
+        id: 5,
+        name: "Edifício Central",
+        mainImg: "predio-1.jpg",
+        info: "Apartamento moderno",
+        area: "120m²",
+        location: "Campinas",
+        price: 1250000,
+        images: ["predio-1.jpg"],
+        planta: "Planta de 120m²",
+        description: "Apartamento amplo com espaço para toda a família."
     }
 ];
 
-/* Aplique os mesmos arquivos de imagem às tags e aos fundos originais. */
+/* ============================================================
+   3. APLICAÇÃO DAS IMAGENS
+   ============================================================ */
+
+/* Coloca a URL original em cada <img data-asset="..."> dentro de container. */
 function applyAssets(container) {
     container.querySelectorAll("[data-asset]").forEach((image) => {
         image.src = originalAssets[image.dataset.asset];
     });
 }
+
+/* Cria uma variável CSS por imagem (ex.: --asset-buildings-png), usada nos fundos
+   do hero e dos indicadores através de style="background-image:var(...)". */
 Object.entries(originalAssets).forEach(([name, uri]) => {
     document.documentElement.style.setProperty(
         "--asset-" + name.replaceAll(".", "-"),
@@ -77,7 +126,11 @@ Object.entries(originalAssets).forEach(([name, uri]) => {
 document.getElementById("favicon").href = originalAssets["favicon.svg"];
 applyAssets(document);
 
-/* App conserva a página inicial e o mesmo contêiner com padding superior. */
+/* ============================================================
+   4. ELEMENTOS PRINCIPAIS DA PÁGINA
+   ============================================================ */
+
+/* App.tsx: <div> com a navbar e o contêiner com padding superior (div.pt-20). */
 const app = document.getElementById("root").firstElementChild;
 const navigation = app.firstElementChild;
 const pageContainer = app.lastElementChild;
@@ -85,38 +138,60 @@ const nav = navigation.querySelector("nav");
 const menuButton = nav.querySelector("button");
 const overlay = navigation.children[1];
 const drawer = navigation.querySelector("aside");
-let isOpen = false;
-let activePage = "home";
 
-/* Equivalente a setIsOpen e ao useEffect que controla a rolagem do body. */
+/* Cópia da página inicial, feita antes de qualquer evento, para recriá-la ao voltar. */
+const homeContent = pageContainer.firstElementChild.cloneNode(true);
+
+/* Estados equivalentes aos useState do React. */
+let isOpen = false;               // NavBar: menu lateral aberto ou fechado
+let activePage = "initialPage";   // App: página exibida
+let imovelEscolhido = null;       // App: imóvel aberto na página de detalhes
+
+/* ============================================================
+   5. MENU LATERAL (NavBar.tsx)
+   ============================================================ */
+
+/* Equivale a setIsOpen e ao useEffect que bloqueia a rolagem do body com o menu aberto.
+   As classes são montadas com as mesmas strings do NavBar.tsx: aberto mostra o overlay
+   e traz a gaveta para a tela; fechado esconde o overlay e empurra a gaveta para a direita. */
 function setMenu(open) {
     isOpen = open;
-    overlay.classList.toggle("opacity-100", open);
-    overlay.classList.toggle("opacity-0", !open);
-    overlay.classList.toggle("pointer-events-none", !open);
-    drawer.classList.toggle("translate-x-0", open);
-    drawer.classList.toggle("translate-x-full", !open);
+    overlay.className = "fixed inset-0 z-30 bg-black/40 transition-opacity duration-300 " +
+        (open ? "opacity-100" : "opacity-0 pointer-events-none");
+    drawer.className = "fixed top-0 right-0 z-40 h-full w-64 md:w-80 bg-white shadow-xl px-6 pt-24 pb-6 flex flex-col gap-6 font-bold text-[#55627a]  transition-transform duration-300 " +
+        (open ? "translate-x-0" : "translate-x-full");
     drawer.setAttribute("aria-hidden", String(!open));
     document.body.style.overflow = open ? "hidden" : "";
 }
 menuButton.addEventListener("click", () => setMenu(!isOpen));
 overlay.addEventListener("click", () => setMenu(false));
 
-/* Mesmos IDs e rótulos de navBarLinks, sem acrescentar novas abas. */
-const navLinks = {
-    home: [
+/* ============================================================
+   6. NAVEGAÇÃO ENTRE PÁGINAS (App.tsx)
+   ============================================================ */
+
+/* Links da navbar de cada página: mesmos IDs e rótulos de navBarLinks no App.tsx. */
+const navBarLinks = {
+    initialPage: [
         { id: "inicio", label: "Início" },
         { id: "oportunidades", label: "Oportunidades" },
         { id: "contato", label: "contato" }
     ],
-    other: [
+    todosOsApartamentos: [
+        { id: "alugar", label: "Alugar" },
+        { id: "comprar", label: "Comprar" },
+        { id: "contato", label: "contato" }
+    ],
+    imovelPage: [
         { id: "alugar", label: "Alugar" },
         { id: "comprar", label: "Comprar" },
         { id: "contato", label: "contato" }
     ]
 };
+
+/* Recria os links da barra (desktop) e da gaveta (celular) para a página atual. */
 function updateNav(page) {
-    const links = page === "home" ? navLinks.home : navLinks.other;
+    const links = navBarLinks[page];
     [nav.children[1], drawer.firstElementChild].forEach((container) => {
         container.replaceChildren(...links.map((link) => {
             const anchor = document.createElement("a");
@@ -128,29 +203,64 @@ function updateNav(page) {
     });
 }
 
-/* A troca de página conserva a navbar e substitui somente seu conteúdo. */
+/* Troca o conteúdo de div.pt-20; a navbar permanece. Como no React, escolher a
+   página já aberta não faz nada, e a posição de rolagem não é alterada. */
 function showPage(page) {
     if (page === activePage) return;
     activePage = page;
-    const template = document.getElementById("template-" + page);
-    pageContainer.replaceChildren(template.content.cloneNode(true));
+    let content;
+    if (page === "initialPage") {
+        content = homeContent.cloneNode(true);
+    } else if (page === "todosOsApartamentos") {
+        content = document.getElementById("template-catalog").content.cloneNode(true);
+    } else {
+        content = document.getElementById("template-detail").content.cloneNode(true);
+        fillImovel(content, imovelEscolhido);
+    }
+    pageContainer.replaceChildren(content);
     updateNav(page);
     applyAssets(pageContainer);
     bindPage(page);
 }
+
+/* navigateToImovelPage do App.tsx: guarda o imóvel e abre a página de detalhes. */
+function navigateToImovelPage(imovel) {
+    imovelEscolhido = imovel;
+    if (imovel !== null) {
+        showPage("imovelPage");
+    }
+}
+
+/* Links "Página Inicial" e "Todos os apartamentos" da gaveta: trocam a página e fecham o menu. */
 const pageLinks = drawer.children[1].querySelectorAll("a");
 pageLinks[0].addEventListener("click", (event) => {
     event.preventDefault();
-    showPage("home");
+    showPage("initialPage");
     setMenu(false);
 });
 pageLinks[1].addEventListener("click", (event) => {
     event.preventDefault();
-    showPage("catalog");
+    showPage("todosOsApartamentos");
     setMenu(false);
 });
 
-/* Carrossel: passo de 300px e os mesmos limites para retornar às extremidades. */
+/* Botão "Conheça" dos cards: um único ouvinte no contêiner (delegação de eventos).
+   A posição do card dentro do contêiner indica qual imóvel da lista foi escolhido. */
+function bindConheca(cardsContainer, getPredios) {
+    cardsContainer.addEventListener("click", (event) => {
+        const button = event.target.closest("button");
+        if (!button) return;
+        const card = Array.from(cardsContainer.children).find((child) => child.contains(button));
+        const predio = card ? getPredios()[Array.from(cardsContainer.children).indexOf(card)] : null;
+        if (predio) navigateToImovelPage(predio);
+    });
+}
+
+/* ============================================================
+   7. CARROSSEL DE DESTAQUES (CardsCarousel.tsx)
+   ============================================================ */
+
+/* Setas: deslocam 300px; nas extremidades, voltam ao início ou vão ao final. */
 function bindCarousel() {
     const section = pageContainer.querySelector("#oportunidades");
     const carousel = section.querySelector(".overflow-hidden");
@@ -171,9 +281,15 @@ function bindCarousel() {
             carousel.scrollBy({ left: 300, behavior: "smooth" });
         }
     });
+    /* Cada card do carrossel corresponde ao imóvel de mesma posição em prediosLista. */
+    bindConheca(carousel.firstElementChild, () => prediosLista);
 }
 
-/* As comparações são idênticas às de AptoPage: nome, preço e metragem. */
+/* ============================================================
+   8. FILTROS DO CATÁLOGO (AptoPage.tsx e AptoList.tsx)
+   ============================================================ */
+
+/* Mesmas comparações do AptoPage: nome (sem diferenciar maiúsculas), preço e metragem. */
 function matchesProperty(property, search, price, area) {
     const matchesSearch = property.name.toLowerCase().includes(search.toLowerCase());
     const matchesPrice = price === "" ||
@@ -187,7 +303,8 @@ function matchesProperty(property, search, price, area) {
     return matchesSearch && matchesPrice && matchesArea;
 }
 
-/* CardsList mantém sua estrutura original; não ganha preço nem botão funcional. */
+/* Liga a busca e os selects à lista. Os cards já gerados no template servem de modelo;
+   a cada alteração, somente os imóveis que passam nos filtros são exibidos. */
 function bindFilters() {
     const section = pageContainer.querySelector("#oportunidades");
     const listContainer = section.lastElementChild;
@@ -199,27 +316,32 @@ function bindFilters() {
     const area = pageContainer.querySelector("#filter-type");
     const empty = document.getElementById("template-list").content
         .querySelector(".py-20").cloneNode(true);
-    let previousKey = properties.map((property) => property.name).join("|");
+    let filtered = prediosLista;
+    let previousKey = prediosLista.map((predio) => predio.name).join("|");
 
     function filter() {
-        const indexes = properties.map((_, index) => index).filter((index) =>
-            matchesProperty(properties[index], search.value, price.value, area.value)
+        const indexes = prediosLista.map((_, index) => index).filter((index) =>
+            matchesProperty(prediosLista[index], search.value, price.value, area.value)
         );
+        filtered = indexes.map((index) => prediosLista[index]);
+        /* Contador "N imóvel/imóveis", com aria-live para leitores de tela. */
         count.textContent = indexes.length + " " +
             (indexes.length === 1 ? "imóvel" : "imóveis");
-        const key = indexes.map((index) => properties[index].name).join("|");
+        const key = filtered.map((predio) => predio.name).join("|");
         if (indexes.length === 0) {
+            /* Nenhum resultado: troca a grade pela mensagem de estado vazio. */
             if (listContainer.lastElementChild !== empty) {
                 listContainer.lastElementChild.replaceWith(empty);
             }
         } else {
             const cards = indexes.map((index) => cardTemplates[index].cloneNode(true));
             if (key === previousKey && grid.parentElement) {
-                /* Mantém os artigos quando a chave React original permanece igual. */
+                /* Mesma chave da grade no React: os <article> são mantidos e só o conteúdo muda. */
                 cards.forEach((card, index) => {
                     grid.children[index].innerHTML = card.innerHTML;
                 });
             } else {
+                /* Chave diferente: a grade é recriada e os cards repetem a animação de entrada. */
                 grid.replaceChildren(...cards);
             }
             if (!grid.parentElement) {
@@ -232,18 +354,35 @@ function bindFilters() {
     search.addEventListener("input", filter);
     price.addEventListener("change", filter);
     area.addEventListener("change", filter);
+    /* O botão Conheça abre o imóvel da posição correspondente na lista filtrada. */
+    bindConheca(grid, () => filtered);
 }
 
-/* ImovelPage preserva o alerta original, sem adicionar modal ou navegação. */
+/* ============================================================
+   9. PÁGINA DO IMÓVEL (ImovelPage.tsx e PicturesDisplay.tsx)
+   ============================================================ */
+
+/* Preenche o título da galeria com o nome do imóvel escolhido (prop nome do PicturesDisplay). */
+function fillImovel(container, predio) {
+    container.querySelector('[data-field="name"]').textContent = predio.name;
+}
+
+/* Galeria (PicturesDisplay.tsx): cada foto mostra o alerta original "Ver mais fotos". */
 function bindGallery() {
-    pageContainer.querySelectorAll("button").forEach((button) => {
+    pageContainer.firstElementChild.firstElementChild.querySelectorAll("button").forEach((button) => {
         button.addEventListener("click", () => alert("Ver mais fotos"));
     });
 }
+
+/* ============================================================
+   10. INICIALIZAÇÃO
+   ============================================================ */
+
+/* Liga os eventos da página que acabou de ser exibida. */
 function bindPage(page) {
-    if (page === "home") bindCarousel();
-    if (page === "catalog") bindFilters();
-    if (page === "detail") bindGallery();
+    if (page === "initialPage") bindCarousel();
+    if (page === "todosOsApartamentos") bindFilters();
+    if (page === "imovelPage") bindGallery();
 }
-/* As ações sem handler no React continuam sem handler nesta conversão. */
-bindPage("home");
+/* Botões que não têm evento no React (ex.: "Ver oportunidades") continuam sem ação. */
+bindPage("initialPage");
